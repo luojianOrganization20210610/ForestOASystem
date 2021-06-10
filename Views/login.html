@@ -1,0 +1,71 @@
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Forest OA System</title>
+    <link href="/ForestOASystem/Content/Site.css" rel="stylesheet">
+    <link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/ForestOASystem/Content/font-awesome.css" rel="stylesheet">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/bootstrap.min.js"></script>
+    <script>
+    function openManageMenu(){
+    window.location.href = "employee_master.html";
+    }
+    </script>
+  </head>
+  <body style="">
+    <header id="headerdiv">
+        <div class="content-wrapper" style="max-width:none;">
+            <div id="headerLeft" class="float-left">Forest OA System</div>
+        </div>
+    </header>
+    <div id="bodydiv" class="clear-fix">
+       <section class="featured">
+           <div class="content-wrapper" style="position:relative;">
+               <div class="content-area">
+                   <div class="title">
+    	               <h1>Mangage Orders</h1>
+                   </div>
+                   <div class="dialog">
+                       Forest OA System enables you to mangage orders.
+                   </div>
+                   <div class="loginBtn">
+                             <fieldset>
+                                  <div class="control-group">
+                                      <label class="control-label" for="UserName">User Name</label>
+                                      <div class="controls">
+                                          <input id="UserName" name="UserName" type="text" value="">
+                                      </div>
+                                  </div>
+                                  <div class="control-group">
+                                      <label class="control-label" for="Password">Password</label>
+                                      <div class="controls">
+                                          <input id="Password" name="Password" type="password">
+                                      </div>
+                                  </div>
+                                  <div style="margin-top:10px" ;="">
+                                      <button id="btnLogin" type="submit" class="btn btn-primary" onclick="openManageMenu()">Log in</button>
+                                  </div>
+                                      <div style="margin-top:20px" ;="">
+                                  </div>
+                              </fieldset>
+                   </div>
+               </div>
+               <div class="image-area">
+                  <span class="topimage"></span>
+               </div>
+           </div>
+           </section>
+        </div>
+    <footer id="footerdiv" class="clear-fix">
+        <div class="content-wrapper">
+            <div class="float-left"><img src="/ForestOASystem/Images/ForsetSoft_icon2.png" alt="Konicaminolta"></div>
+            <div class="float-right"><div class="float-right"><img src="/ForestOASystem/Images/text_identity_en.png" alt="Giving Shape to Ideas"></div>
+                <nav style="margin-top:20px;">
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

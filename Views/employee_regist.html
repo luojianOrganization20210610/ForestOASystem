@@ -1,0 +1,86 @@
+<html><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Forest OA System</title>
+    <link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/ForestOASystem/Content/font-awesome.css" rel="stylesheet">
+    <link href="/ForestOASystem/Content/style_v1.css" rel="stylesheet">
+    <link href="/ForestOASystem/Content/ManageUser.css" rel="stylesheet">
+</head>
+<body>
+    <!--Start Container-->
+    <div id="main" class="container-fluid">
+        <div class="row">
+            <div id="sidebar-left" class="col-xs-2 col-sm-2">
+                <ul class="nav main-menu">
+                    <li>
+                        <a href="employee_master.html" class="ajax-link">
+                            <i class="icon-group"></i>
+                            <span class="hidden-xs">社員マスター</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/ApplicationId" class="ajax-link">
+                            <i class="icon-tags"></i>
+                            <span class="hidden-xs">取引先マスター</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Setting" class="ajax-link">
+                            <i class="icon-pencil"></i>
+                            <span class="hidden-xs">受注</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/Template" class="ajax-link">
+                            <i class="icon-list-alt"></i>
+                            <span class="hidden-xs">発注</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--Start Content-->
+            <div id="content" class="col-xs-12 col-sm-10">
+            <div id="ajax-content">
+
+<div id="datalist-home" data-role="page" class="">
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">
+            <i class="icon-user"></i> <span id="table-title">社員マスター</span>
+        </div>
+        <div class="panel-body">
+        </div>
+        <!-- Table -->
+        <table id="datalist" class="table">
+         <div class="form-group">
+         <label class="control-label"style="margin-left: 5px;" >社員番号</label>                                 
+         <input type="text" value="" style="margin-left: 5px;"></input>
+         </div>
+         <div class="form-group">
+         <label class="control-label" style="margin-left: 5px;">名前</label>                                 
+         <input type="text" value="" style="margin-left: 32px;"></input>
+         </div>
+         <div class="form-group">
+         <label class="control-label" style="margin-left: 5px;">性別</label>                                 
+         <input type="text" value="" style="margin-left: 32px;"></input>
+         </div>
+                  <div class="form-group">
+         <label class="control-label" style="margin-left: 5px;">年齢</label>                                 
+         <input type="text" value="" style="margin-left: 32px;"></input>
+         </div>
+         
+         <div class="text-center" style="margin-bottom: 10px;">
+                                <button type="submit" class="btn btn-primary">登録</button>
+                                <a href="employee_master.html" class="btn btn-default">取消</a>
+         </div>
+        </table>
+    </div>
+</div>
+                </div>
+                <!--End Content-->
+            </div>
+        </div>
+    </div>
+</body></html>
