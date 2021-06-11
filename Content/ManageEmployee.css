@@ -17,3 +17,13 @@ button.cannot-delete { display:none; }
     margin-left: 20px; 
     width: 130px;
 }
+
+.employee-info-input {
+    margin-left: 30px;
+}
+
+.employee-info-select {
+    margin-left: 30px;
+    width: 182.6px;
+    height: 26px
+}
