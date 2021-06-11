@@ -12,3 +12,8 @@
         #delete-dialog .modal-dialog .box .box-content .footer-buttons { text-align:right;margin-right:15px; }
 
 button.cannot-delete { display:none; }
+
+.employee-info-lable {
+    margin-left: 20px; 
+    width: 130px;
+}
