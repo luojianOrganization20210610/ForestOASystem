@@ -18,13 +18,30 @@ button.cannot-delete { display:none; }
     width: 130px;
 }
 
+.customer-memo-lable {
+	position: absolute;
+	margin-left: 20px; 
+	width: 130px;
+}
+
 textarea{
 	width: 400px;
 	height: 200px;
 	resize: none;
+	margin-left: 180px;
 }
 
 .customer-div{
 	display: block;
 	width: 100%;
+}
+
+.customer-select{
+	margin-left: 30px;
+	width: 182.6px;
+	height: 26px;
+}
+
+input{
+	margin-left: 30px;
 }
