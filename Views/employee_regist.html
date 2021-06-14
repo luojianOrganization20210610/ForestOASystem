@@ -9,6 +9,27 @@
     <link href="/ForestOASystem/Content/ManageEmployee.css" rel="stylesheet">
 </head>
 <body>
+    <!--Start header-->
+    <header class="navbar">
+        <div class="container-fluid expanded-panel">
+            <div class="row">
+                <div id="top-panel" class="col-xs-12 col-sm-12">
+                    <div class="row">
+                        <div class="col-xs-8 col-sm-2">
+                            <div class="systemName">Forest OA System</div>
+                        </div>
+                        <div class="col-xs-4 col-sm-10 top-panel-right">
+                            <div class="loginUserName">
+                                <span>admin</span>
+                                <i class="icon-angle-down pull-right" style="margin-top: 20px;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--End header-->
     <div id="main" class="container-fluid">
         <div class="row">
             <!--Start Sidebar-->
@@ -53,54 +74,54 @@
                                 <i class="icon-user"></i> <span id="table-title">社員マスター</span>
                             </div>
                             <div class="panel-body">
+                                <!-- Table -->
+                                <table id="datalist" class="table">
+                                    <div class="form-group">
+                                        <label class="employee-info-lable">社員ID</label>
+                                        <input class="employee-info-input" type="text" value="" disabled="disabled">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="employee-info-lable">名前</label>
+                                        <input class="employee-info-input" type="text" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="employee-info-lable">社員区分</label>
+                                        <select class="employee-info-select">
+                                            <option value="0" selected="selected">区分1</option>
+                                            <option value="1">区分2</option>
+                                            <option value="2">区分3</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="employee-info-lable">ロール</label>
+                                        <select class="employee-info-select">
+                                            <option value="0" selected="selected">ロール1</option>
+                                            <option value="1">ロール2</option>
+                                            <option value="2">ロール3</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="employee-info-lable">社用メールアドレス</label>
+                                        <input class="employee-info-input" type="text" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="employee-info-lable">個人メールアドレス</label>
+                                        <input class="employee-info-input" type="text" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="employee-info-lable">社用携帯</label>
+                                        <input class="employee-info-input" type="text" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="employee-info-lable" style="margin-left: 20px; width: 130px;">個人用携帯</label>
+                                        <input class="employee-info-input" value="">
+                                    </div>
+                                    <div class="text-center" style="margin-bottom: 10px;">
+                                        <button type="submit" class="btn btn-primary">登録</button>
+                                        <a href="employee_master.html" class="btn btn-default">取消</a>
+                                    </div>
+                                </table>
                             </div>
-                            <!-- Table -->
-                            <table id="datalist" class="table">
-                                <div class="form-group">
-                                    <label class="employee-info-lable">社員ID</label>
-                                    <input class="employee-info-input" type="text" value="" disabled="disabled">
-                                </div>
-                                <div class="form-group">
-                                    <label class="employee-info-lable" >名前</label>
-                                    <input class="employee-info-input" type="text" value="">
-                                </div>
-                                <div class="form-group">
-                                    <label  class="employee-info-lable">社員区分</label>
-                                    <select class="employee-info-select">
-                                        <option value="0" selected="selected">区分1</option>
-                                        <option value="1">区分2</option>
-                                        <option value="2">区分3</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label class="employee-info-lable" >ロール</label>
-                                    <select class="employee-info-select">
-                                        <option value="0" selected="selected">ロール1</option>
-                                        <option value="1">ロール2</option>
-                                        <option value="2">ロール3</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label class="employee-info-lable" >社用メールアドレス</label>
-                                    <input class="employee-info-input" type="text" value="">
-                                </div>
-                                <div class="form-group">
-                                    <label class="employee-info-lable">個人メールアドレス</label>
-                                    <input class="employee-info-input" type="text" value="">
-                                </div>
-                                <div class="form-group">
-                                    <label class="employee-info-lable">社用携帯</label>
-                                    <input class="employee-info-input" type="text" value="">
-                                </div>
-                                <div class="form-group">
-                                    <label class="employee-info-lable" style="margin-left: 20px; width: 130px;">個人用携帯</label>
-                                    <input class="employee-info-input" value="">
-                                </div>
-                                <div class="text-center" style="margin-bottom: 10px;">
-                                    <button type="submit" class="btn btn-primary">登録</button>
-                                    <a href="employee_master.html" class="btn btn-default">取消</a>
-                                </div>
-                            </table>
                         </div>
                     </div>
                 </div>

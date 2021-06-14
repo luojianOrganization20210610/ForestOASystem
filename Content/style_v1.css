@@ -173,11 +173,11 @@ a.show-sidebar:hover {
 #top-panel {
   line-height: 50px;
   height: 50px;
-  background:#dbdbdb;
+  background-color:gray;
 }
 #main {
-  /*margin-top: 50px;*/
-  min-height: 720px;
+  margin-top: 50px;
+  min-height: 100%;
   overflow: hidden;
 }
 #search {
@@ -2277,5 +2277,26 @@ border-radius: 50%;}
 	height: 200px;
 	background-color: #FFFFFF; /*#FFF3F3;*/
 }
-/* The same style can be found in the Site.css. Unfortunately.
-   Manager page own Style, been added... <<< */
+
+#ajax-content {
+    padding: 20px;
+}
+
+#datalist
+{
+    font-size: 13px;
+}
+
+.systemName
+{
+font-size: 24px;
+color: #fff;
+margin-left: 8px;
+}
+
+.loginUserName
+{
+float: right;
+font-size: 16px;
+color: #fff;
+}
