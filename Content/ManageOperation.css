@@ -81,4 +81,33 @@ button.cannot-delete {
 	width: 500px;
 }
 
+.oper-label {
+	font-size:14px;
+}
+
+.oper-info-input {
+	margin-left: 20px !important;
+	height: 26px;
+	width:182px;
+}
+
+.oper-info-checkbox {
+	margin-left: 20px !important;
+}
+
+.oper-info-select {
+	margin-left: 20px;
+	width: 182px;
+	height: 26px
+}
+
+.oper-form-group {
+	height: 40px;
+}
+
+.oper-info-date {
+	margin-left: 24px;
+	width: 182px;
+	height: 24px;
+	float: left
 }

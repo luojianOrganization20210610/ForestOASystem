@@ -1,0 +1,255 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Forest OA System</title>
+    <link href="/ForestOASystem/Content/Site.css" rel="stylesheet">
+    <link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="/ForestOASystem/Content/font-awesome.css" rel="stylesheet">
+    <link href="/ForestOASystem/Content/style_v1.css" rel="stylesheet">
+    <link href="/ForestOASystem/Content/ManageOperation.css" rel="stylesheet">
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/moment.js/2.22.0/moment-with-locales.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+
+    <script>
+        $(function () {
+            $('#form1').hide();
+            var picker1 = $('#datetimepicker1').datetimepicker({
+                format: 'YYYY-MM-DD',
+                locale: moment.locale('en'),
+                //minDate: '2016-7-1'
+            });
+            var picker2 = $('#datetimepicker2').datetimepicker({
+                format: 'YYYY-MM-DD',
+                locale: moment.locale('en')
+            });
+            //动态设置最小值
+            picker1.on('dp.change', function (e) {
+                picker2.data('DateTimePicker').minDate(e.date);
+            });
+            //动态设置最大值
+            picker2.on('dp.change', function (e) {
+                picker1.data('DateTimePicker').maxDate(e.date);
+            });
+        });
+        $('#datetimepicker1').datetimepicker({
+            format: 'YYYY-MM-DD',
+            locale: moment.locale('zh-cn'),
+            defaultDate: "2018-1-1"
+        });
+        $('#datetimepicker2').datetimepicker({
+            format: 'YYYY-MM-DD',
+            locale: moment.locale('zh-cn'),
+            defaultDate: "2028-1-1"
+        });
+    </script>
+
+</head>
+<body>
+    <!--Start header-->
+    <header class="navbar">
+        <div class="container-fluid expanded-panel">
+            <div class="row">
+                <div id="top-panel" class="col-xs-12 col-sm-12">
+                    <div class="row">
+                        <div class="col-xs-8 col-sm-2">
+                            <div class="systemName">Forest OA System</div>
+                        </div>
+                        <div class="col-xs-4 col-sm-10 top-panel-right">
+                            <div class="loginUserName">
+                            <span>admin</span>
+                            <i class="icon-angle-down pull-right" style="margin-top: 20px;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--End header-->
+    <!--Start Container-->
+    <div id="main" class="container-fluid">
+        <div class="row">
+            <div id="sidebar-left" class="col-xs-2 col-sm-2">
+                <ul class="nav main-menu">
+                    <li>
+                        <a href="employee_master.html" class="ajax-link">
+                            <i class="icon-group"></i>
+                            <span class="hidden-xs">社員マスター</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="customer_master.html" class="ajax-link">
+                            <i class="icon-tags"></i>
+                            <span class="hidden-xs">取引先マスター</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Setting" class="ajax-link">
+                            <i class="icon-pencil"></i>
+                            <span class="hidden-xs">受注</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/Template" class="ajax-link">
+                            <i class="icon-list-alt"></i>
+                            <span class="hidden-xs">発注</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="operation_list.html" class="ajax-link">
+                            <i class="icon-th-list"></i>
+                            <span class="hidden-xs">稼働明細一覧</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--Start Content-->
+            <div id="content" class="col-xs-12 col-sm-10">
+                <div id="ajax-content">
+
+                    <div id="datalist-home" data-role="page" class="">
+                        <div class="panel panel-default">
+                            <!-- Default panel contents -->
+                            <div class="panel-heading">
+                                <i class="icon-th-list"></i> <span id="table-title">稼働明細一覧</span>
+                            </div>
+                            <div class="panel-body">
+                                <div class="oper-form-group">
+                                    <div class="col-sm-12">
+                                        <div style="float:left">
+                                            <label class="oper-label">稼働月</label>
+                                        </div>
+                                        <div class='input-group date oper-info-date' id='datetimepicker1'>
+                                            <input type='text' class="timeInput form-control" />
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
+                                        <div style="float:left">から</div>
+                                        <div class='input-group date date oper-info-date' id='datetimepicker2'>
+                                            <input type='text' class="timeInput form-control" />
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
+                                        <div style="float:left">まで</div>
+                                    </div>
+                                </div>
+                                <div class="oper-form-group">
+                                    <div class="col-sm-4">
+                                        <label class="oper-label">技術者</label>
+                                        <input class="oper-info-input">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <label class="oper-label">勤務表調整済</label>
+                                        <input class="oper-info-checkbox" type="checkbox">
+                                    </div>
+                                </div>
+                                <div class="oper-form-group">
+                                    <div class="col-sm-4">
+                                        <label class="oper-label">取引先</label>
+                                        <select class="oper-info-select">
+                                            <option value="0" selected="selected">取引先1</option>
+                                            <option value="1">取引先2</option>
+                                            <option value="2">取引先3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <label class="oper-label">見積書発行済</label>
+                                        <input class="oper-info-checkbox" type="checkbox">
+                                    </div>
+                                </div>
+                                <div class="oper-form-group">
+                                    <div class="col-sm-4">
+                                        <label class="oper-label">得意先</label>
+                                        <select class="oper-info-select">
+                                            <option value="0" selected="selected">得意先1</option>
+                                            <option value="1">得意先2</option>
+                                            <option value="2">得意先3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <label class="oper-label">請求書発行済</label>
+                                        <input class="oper-info-checkbox" type="checkbox">
+                                    </div>
+                                </div>
+                                <div class="oper-form-group">
+                                    <div class="col-sm-4">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <label class="oper-label">注文書発行済</label>
+                                        <input class="oper-info-checkbox" type="checkbox">
+                                    </div>
+                                </div>
+                                <div class="oper-form-group">
+                                    <div class="col-sm-4 text-left">
+                                        <button type="submit" class="btn btn-primary">検索</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body-list">
+                                <div class="col-sm-12 text-center" style="margin-bottom:10px">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default">見積書</button>
+                                        <button type="button" class="btn btn-default">請求書</button>
+                                        <button type="button" class="btn btn-default">注文書</button>
+                                    </div>
+                                </div>
+                                <!-- Table -->
+                                <table id="datalist" class="table">
+
+                                    <thead>
+                                        <tr>
+                                            <th style="width:50px">選択</thstyle="width:20px">
+                                            <th>No.</th>
+                                            <th>技術者</th>
+                                            <th>所属</th>
+                                            <th>お客様</th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>1</td>
+                                            <td>李</td>
+                                            <td>会社1</td>
+                                            <td>会社2</td>
+                                            <td><a href="operation_detail.html">詳細</td>
+                                            <td><a href="">見積書</td>
+                                            <td><a href="">請求書</td>
+                                            <td><a href="">注文書</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>2</td>
+                                            <td>趙</td>
+                                            <td>会社1</td>
+                                            <td>会社2</td>
+                                            <td><a href="operation_detail.html">詳細</td>
+                                            <td><a href="">見積書</td>
+                                            <td><a href="">請求書</td>
+                                            <td><a href="">注文書</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                <!--End Content-->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
