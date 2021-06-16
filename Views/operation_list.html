@@ -61,8 +61,8 @@
                         </div>
                         <div class="col-xs-4 col-sm-10 top-panel-right">
                             <div class="loginUserName">
-                            <span>admin</span>
-                            <i class="icon-angle-down pull-right" style="margin-top: 20px;"></i>
+                                <span>admin</span>
+                                <i class="icon-angle-down pull-right" style="margin-top: 20px;"></i>
                             </div>
                         </div>
                     </div>
@@ -188,18 +188,26 @@
                                         <input class="oper-info-checkbox" type="checkbox">
                                     </div>
                                 </div>
-                                <div class="oper-form-group">
+                                <div class="">
                                     <div class="col-sm-4 text-left">
                                         <button type="submit" class="btn btn-primary">検索</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="panel-body-list">
-                                <div class="col-sm-12 text-center" style="margin-bottom:10px">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-default">見積書</button>
-                                        <button type="button" class="btn btn-default">請求書</button>
-                                        <button type="button" class="btn btn-default">注文書</button>
+                                <div class="col-sm-12" style="height:60px">
+                                    <div class="col-sm-7 text-right" style="margin-top:15px">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-default">見積書</button>
+                                            <button type="button" class="btn btn-default">請求書</button>
+                                            <button type="button" class="btn btn-default">注文書</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5　text-left">
+                                        <div><input type="radio" name="exportG" style="width:30px" /><label class="oper-label">一括出力</label></div>
+                                        <div><input type="radio" name="exportG" style="width:30px" /><label class="oper-label">個別出力</label></div>
+                                    </div>
+                                    <div>
                                     </div>
                                 </div>
                                 <!-- Table -->
@@ -207,11 +215,13 @@
 
                                     <thead>
                                         <tr>
-                                            <th style="width:50px">選択</thstyle="width:20px">
+                                            <th style="width:50px">選択</th>
                                             <th>No.</th>
                                             <th>技術者</th>
                                             <th>所属</th>
                                             <th>お客様</th>
+                                            <th>稼働開始</th>
+                                            <th>稼働終了</th>
                                             <th></th>
                                             <th></th>
                                             <th></th>
@@ -225,6 +235,8 @@
                                             <td>李</td>
                                             <td>会社1</td>
                                             <td>会社2</td>
+                                            <td>202106</td>
+                                            <td>202112</td>
                                             <td><a href="operation_detail.html">詳細</td>
                                             <td><a href="">見積書</td>
                                             <td><a href="">請求書</td>
@@ -236,6 +248,34 @@
                                             <td>趙</td>
                                             <td>会社1</td>
                                             <td>会社2</td>
+                                            <td>202106</td>
+                                            <td>202112</td>
+                                            <td><a href="operation_detail.html">詳細</td>
+                                            <td><a href="">見積書</td>
+                                            <td><a href="">請求書</td>
+                                            <td><a href="">注文書</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>3</td>
+                                            <td>王</td>
+                                            <td>会社1</td>
+                                            <td>会社2</td>
+                                            <td>202106</td>
+                                            <td>202112</td>
+                                            <td><a href="operation_detail.html">詳細</td>
+                                            <td><a href="">見積書</td>
+                                            <td><a href="">請求書</td>
+                                            <td><a href="">注文書</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>4</td>
+                                            <td>李</td>
+                                            <td>会社1</td>
+                                            <td>会社2</td>
+                                            <td>202106</td>
+                                            <td>202112</td>
                                             <td><a href="operation_detail.html">詳細</td>
                                             <td><a href="">見積書</td>
                                             <td><a href="">請求書</td>
@@ -243,11 +283,24 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                                <div class=" text-center">
+                                    <ul class="pagination">
+                                        <li><a href="#">&laquo;</a></li>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">6</a></li>
+                                        <li><a href="#">&raquo;</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                <!--End Content-->
+                    <!--End Content-->
+                </div>
             </div>
         </div>
     </div>
