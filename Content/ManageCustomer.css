@@ -13,6 +13,18 @@
 
 button.cannot-delete { display:none; }
 
+html
+{
+    height: 100%;
+    overflow: hidden;
+}
+
+body
+{
+    height: 100%;
+    overflow: hidden;
+}
+
 .customer-info-lable {
     margin-left: 20px; 
     width: 130px;
@@ -28,7 +40,7 @@ textarea{
 	width: 400px;
 	height: 200px;
 	resize: none;
-	margin-left: 180px;
+	margin-left: 183px;
 }
 
 .customer-div{
