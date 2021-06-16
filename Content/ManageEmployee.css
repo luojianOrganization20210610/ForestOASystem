@@ -1,4 +1,4 @@
-﻿#filter-area {
+#filter-area {
     margin-left: 15px;
     margin-right: 15px;
 }
@@ -12,6 +12,18 @@
         #delete-dialog .modal-dialog .box .box-content .footer-buttons { text-align:right;margin-right:15px; }
 
 button.cannot-delete { display:none; }
+
+html
+{
+    height: 100%;
+    overflow: hidden;
+}
+
+body
+{
+    height: 100%;
+    overflow: hidden;
+}
 
 .employee-info-lable {
     margin-left: 20px; 
