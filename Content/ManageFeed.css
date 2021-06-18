@@ -38,7 +38,7 @@ button.cannot-delete {
 	width: 130px;
 }
 
-.oper-select-control {
+.feed-select-control {
 	display: block;
 	width: 300px;
 	height: 26px;
@@ -49,12 +49,13 @@ button.cannot-delete {
 	border-radius: 3px;
 }
 
-.oper-div {
-	display: block;
-	width: 100%;
+.feed-info-select {
+	margin-left: 20px;
+	width: 182.6px;
+	height: 26px;
 }
 
-.oper-control {
+.feed-control {
 	width: 300px;
 	height: calc(2.25rem + 2px);
 	padding: .375rem .75rem;
@@ -68,7 +69,7 @@ button.cannot-delete {
 	transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-.oper-control.oper-control-border {
+.feed-control.feed-control-border {
 	border-top: 0;
 	border-left: 0;
 	border-right: 0;
@@ -76,38 +77,47 @@ button.cannot-delete {
 	box-shadow: inherit;
 }
 
-.oper-table {
+.feed-table {
 	margin-left: 20px;
 	width: 500px;
 }
 
-.oper-label {
+.feed-label {
 	font-size: 14px;
+	width: 140px;
 }
 
-.oper-info-input {
+.feed-info-input {
 	margin-left: 20px !important;
 	height: 26px;
 	width: 182px;
 }
 
-.oper-info-checkbox {
+.feed-info-checkbox {
 	margin-left: 20px !important;
 }
 
-.oper-info-select {
+.feed-info-select {
 	margin-left: 20px;
 	width: 182px;
 	height: 26px
 }
 
-.oper-form-group {
+.feed-form-group {
 	height: 40px;
 }
 
-.oper-info-date {
+.feed-info-date {
 	margin-left: 24px;
 	width: 182px;
 	height: 24px;
 	float: left
 }
+
+textarea {
+	width: 400px;
+	height: 200px;
+	resize: none;
+	margin-left: 160px;
+}
+

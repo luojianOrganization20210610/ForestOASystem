@@ -1,145 +1,166 @@
 <html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Forest OA System</title>
-    <link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="/ForestOASystem/Content/font-awesome.css" rel="stylesheet">
-    <link href="/ForestOASystem/Content/style_v1.css" rel="stylesheet">
-    <link href="/ForestOASystem/Content/ManageCustomer.css" rel="stylesheet">
-</head>
-<body>
-	<!--Start header-->
-	<header class="navbar">
-	    <div class="container-fluid expanded-panel">
-	        <div class="row">
-	            <div id="top-panel" class="col-xs-12 col-sm-12">
-	                <div class="row">
-	                    <div class="col-xs-8 col-sm-2">
-	                        <div class="systemName">Forest OA System</div>
-	                    </div>
-	                    <div class="col-xs-4 col-sm-10 top-panel-right">
-	                        <div class="loginUserName">
-	                            <span>admin</span>
-	                            <i class="icon-angle-down pull-right" style="margin-top: 20px;"></i>
-	                        </div>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-	    </div>
-	</header>
-    <div id="main" class="container-fluid">
-        <div class="row">
-            <!--Start Sidebar-->
-            <div id="sidebar-left" class="col-xs-2 col-sm-2">
-                <ul class="nav main-menu">
-                    <li>
-                        <a href="employee_master.html" class="ajax-link">
-                            <i class="icon-group"></i>
-                            <span class="hidden-xs">社員マスター</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="customer_master.html" class="ajax-link">
-                            <i class="icon-tags"></i>
-                            <span class="hidden-xs">取引先マスター</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/Setting" class="ajax-link">
-                            <i class="icon-pencil"></i>
-                            <span class="hidden-xs">受注</span>
-                        </a>
-                    </li>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Forest OA System</title>
+		<link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="/ForestOASystem/Content/font-awesome.css" rel="stylesheet">
+		<link href="/ForestOASystem/Content/style_v1.css" rel="stylesheet">
+		<link href="/ForestOASystem/Content/ManageCustomer.css" rel="stylesheet">
 
-                    <li>
-                        <a href="/Template" class="ajax-link">
-                            <i class="icon-list-alt"></i>
-                            <span class="hidden-xs">発注</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="operation_list.html" class="ajax-link">
-                            <i class="icon-th-list"></i>
-                            <span class="hidden-xs">稼働明細一覧</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!--End Sidebar-->
-            <!--Start Content-->
-            <div id="content" class="col-xs-12 col-sm-10">
-                <div id="ajax-content">
-
-                    <div id="datalist-home" data-role="page" class="">
-                        <div class="panel panel-default">
-                            <!-- Default panel contents -->
-                            <div class="panel-heading">
-                                <i class="icon-th-list"></i>&nbsp;<span id="table-title">取引先マスター</span>
-                            </div>
-                            <div class="panel-body">
-                            </div>
-                            <!-- Div -->
-                            <div class="customer-div">
-                                <div class="form-group">
-                                    <label class="customer-info-lable">取引先NO</label>
-                                    <input type="text" value="" />
-                                </div>
-                                <div class="form-group">
-                                    <label class="customer-info-lable">取引先名</label>
-                                    <input type="text" value="" />
-                                </div>
-                                <div class="form-group">
-                                    <label class="customer-info-lable">取引先区分</label>
-                                    <select class="customer-select" name="divide">
-                                        <option value="0" selected="selected">取引先区分1</option>
-                                        <option value="1">取引先区分2</option>
-                                        <option value="2">取引先区分3</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label class="customer-info-lable">支払いサイド</label>
-                                    <select class="customer-select" name="pay">
-                                        <option value="0" selected="selected">支払いサイド1</option>
-                                        <option value="1">支払いサイド2</option>
-                                        <option value="2">支払いサイド3</option>
-										<option value="3">支払いサイド4</option>
-                                    </select>
-                                </div>
-								<div class="form-group">
-								    <label class="customer-info-lable">四捨五入</label>
-								    <select class="customer-select" name="sichichute">
-								        <option value="0" selected="selected">四捨五入1</option>
-								        <option value="1">四捨五入2</option>
-								        <option value="2">四捨五入3</option>
-										<option value="3">四捨五入4</option>
-								    </select>
+	</head>
+	<body>
+		<!--Start header-->
+		<header class="navbar">
+			<div class="container-fluid expanded-panel">
+				<div class="row">
+					<div id="top-panel" class="col-xs-12 col-sm-12">
+						<div class="row">
+							<div class="col-xs-8 col-sm-2">
+								<div class="systemName">Forest OA System</div>
+							</div>
+							<div class="col-xs-4 col-sm-10 top-panel-right">
+								<div class="loginUserName">
+									<span>admin</span>
+									<i class="icon-angle-down pull-right" style="margin-top: 20px;"></i>
 								</div>
-                                <div class="form-group">
-                                    <label class="customer-info-lable">郵便</label>
-                                    <input type="text" value="" />
-                                </div>
-                                <div class="form-group">
-                                    <label class="customer-info-lable">住所</label>
-                                    <input type="text" value="" />
-                                </div>
-                                <div class="form-group">
-                                    <label class="customer-memo-lable">備考</label>
-                                    <textarea type="text" value=""></textarea>
-                                </div>
-                                <div class="text-center" style="margin-bottom: 10px;">
-                                    <button type="submit" class="btn btn-primary">登録</button>
-                                    <a href="customer_master.html" class="btn btn-default">取消</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End Content-->
-            </div>
-        </div>
-    </div>
-</body>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div id="main" class="container-fluid">
+			<div class="row">
+				<!--Start Sidebar-->
+				<div id="sidebar-left" class="col-xs-2 col-sm-2">
+					<ul class="nav main-menu">
+						<li>
+							<a href="employee_master.html" class="ajax-link">
+								<i class="icon-group"></i>
+								<span class="hidden-xs">社員マスター</span>
+							</a>
+						</li>
+						<li>
+							<a href="customer_master.html" class="ajax-link">
+								<i class="icon-tags"></i>
+								<span class="hidden-xs">取引先マスター</span>
+							</a>
+						</li>
+						<li>
+							<a href="feed_list.html" class="ajax-link">
+								<i class="icon-pencil"></i>
+								<span class="hidden-xs">受注</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="/Template" class="ajax-link">
+								<i class="icon-list-alt"></i>
+								<span class="hidden-xs">発注</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="operation_list.html" class="ajax-link">
+								<i class="icon-th-list"></i>
+								<span class="hidden-xs">稼働明細一覧</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!--End Sidebar-->
+				<!--Start Content-->
+				<div id="content" class="col-xs-12 col-sm-10">
+					<div id="ajax-content">
+
+						<div id="datalist-home" data-role="page" class="">
+							<div class="panel panel-default">
+								<!-- Default panel contents -->
+								<div class="panel-heading">
+									<i class="icon-th-list"></i>&nbsp;<span id="table-title">取引先マスター</span>
+								</div>
+								<div class="panel-body">
+									<div class="customer-div">
+										<div class="form-group">
+											<label class="customer-info-lable">取引先NO</label>
+											<input type="text" value="" />
+										</div>
+										<div class="form-group">
+											<label class="customer-info-lable">取引先名</label>
+											<input type="text" value="" />
+										</div>
+										<div class="form-group">
+											<label class="customer-info-lable">取引先区分</label>
+											<select class="customer-select" name="divide">
+												<option value="0" selected="selected">取引先区分1</option>
+												<option value="1">取引先区分2</option>
+												<option value="2">取引先区分3</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<label class="customer-info-lable">支払いサイド1</label>
+												<input style="width: 60px;" />
+												<span>月</span>
+												<input style="width: 60px;" />
+												<span>日</span>
+										</div>
+										<div class="form-group">
+											<label class="customer-info-lable">支払いサイド2</label>
+												<input style="width: 60px;" />
+												<span>月</span>
+												<input style="width: 60px;" />
+												<span>日</span>
+										</div>
+										<div class="form-group">
+											<label class="customer-info-lable">支払いサイド3</label>
+												<input style="width: 60px;" />
+												<span>月</span>
+												<input style="width: 60px;" />
+												<span>日</span>
+										</div>
+										<div class="form-group">
+											<label class="customer-info-lable">支払いサイド4</label>
+												<input style="width: 60px;" />
+												<span>月</span>
+												<input style="width: 60px;" />
+												<span>日</span>
+										</div>
+										<div class="form-group">
+											<label class="customer-info-lable">四捨五入</label>
+											<select class="customer-select" name="sichichute">
+												<option value="0" selected="selected">四捨五入1</option>
+												<option value="1">四捨五入2</option>
+												<option value="2">四捨五入3</option>
+												<option value="3">四捨五入4</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<label class="customer-info-lable">郵便番号</label>
+											<input type="text" value="" />
+										</div>
+										<div class="form-group">
+											<label class="customer-info-lable">住所</label>
+											<input type="text" value="" />
+										</div>
+										<div class="form-group">
+											<label class="customer-memo-lable">備考</label>
+											<textarea type="text" value=""></textarea>
+										</div>
+										<div class="text-center" style="margin-bottom: 10px;">
+											<button type="submit" class="btn btn-primary">登録</button>
+											<a href="customer_master.html" class="btn btn-default">取消</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--End Content-->
+				</div>
+			</div>
+		</div>
+
+
+	</body>
 </html>

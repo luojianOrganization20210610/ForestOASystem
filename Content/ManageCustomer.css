@@ -13,18 +13,6 @@
 
 button.cannot-delete { display:none; }
 
-html
-{
-    height: 100%;
-    overflow: hidden;
-}
-
-body
-{
-    height: 100%;
-    overflow: hidden;
-}
-
 .customer-info-lable {
     margin-left: 20px; 
     width: 130px;
