@@ -89,7 +89,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="oper_list.html" class="ajax-link">
+                        <a href="feed_list.html" class="ajax-link">
                             <i class="icon-pencil"></i>
                             <span class="hidden-xs">受注</span>
                         </a>
@@ -118,7 +118,10 @@
                         <div class="panel panel-default">
                             <!-- Default panel contents -->
                             <div class="panel-heading">
-                                <i class="icon-th-list"></i> <span id="table-title">稼働明細一覧</span>
+                                <i class="icon-th-list"></i> <span id="table-title">発注明細一覧</span>
+                                <div class="titlemenu-area">
+                                    <a href="send_order_regist.html"><i class="icon-plus"></i>&nbsp;<span class="head-menu">Add</span></a>
+                                </div>
                             </div>
                             <div class="panel-body">
                                 <div class="oper-form-group">
@@ -145,12 +148,24 @@
                                 </div>
                                 <div class="oper-form-group">
                                     <div class="col-sm-4">
-                                        <label class="oper-label">技術者</label>
+                                        <label class="oper-label">発注番号</label>
                                         <input class="oper-info-input">
                                     </div>
                                     <div class="col-sm-8">
-                                        <label class="oper-label">見積書発行済</label>
+                                        <label class="oper-label">注文書発行済</label>
                                         <input class="oper-info-checkbox" type="checkbox">
+                                    </div>
+                                </div>
+                                <div class="oper-form-group">
+                                    <div class="col-sm-4">
+                                        <label class="oper-label">発注区分</label>
+                                        <select class="oper-info-select">
+                                            <option value="0" selected="selected">記入済</option>
+                                            <option value="1">発注済</option>
+                                            <option value="2">取消済</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-8">
                                     </div>
                                 </div>
                                 <div class="oper-form-group">
@@ -163,8 +178,6 @@
                                         </select>
                                     </div>
                                     <div class="col-sm-8">
-                                        <label class="oper-label">請求書発行済</label>
-                                        <input class="oper-info-checkbox" type="checkbox">
                                     </div>
                                 </div>
                                 <div class="oper-form-group">
@@ -177,16 +190,6 @@
                                         </select>
                                     </div>
                                     <div class="col-sm-8">
-                                        <label class="oper-label">注文書発行済</label>
-                                        <input class="oper-info-checkbox" type="checkbox">
-                                    </div>
-                                </div>
-                                <div class="oper-form-group">
-                                    <div class="col-sm-4">
-                                    </div>
-                                    <div class="col-sm-8">
-                                        <label class="oper-label">勤務表調整済</label>
-                                        <input class="oper-info-checkbox" type="checkbox">
                                     </div>
                                 </div>
                                 <div class="">
@@ -197,14 +200,12 @@
                             </div>
                             <div class="panel-body-list">
                                 <div class="col-sm-12" style="height:60px">
-                                    <div class="col-sm-7 text-right" style="margin-top:15px">
+                                    <div class="col-sm-6 text-right" style="margin-top:15px">
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-default">見積書</button>
-                                            <button type="button" class="btn btn-default">請求書</button>
                                             <button type="button" class="btn btn-default">注文書</button>
                                         </div>
                                     </div>
-                                    <div class="col-sm-5　text-left">
+                                    <div class="col-sm-6　text-left">
                                         <div><input type="radio" name="exportG" style="width:30px" /><label class="oper-label">一括出力</label></div>
                                         <div><input type="radio" name="exportG" style="width:30px" /><label class="oper-label">個別出力</label></div>
                                     </div>
@@ -218,68 +219,58 @@
                                         <tr>
                                             <th style="width:50px">選択</th>
                                             <th>No.</th>
-                                            <th>技術者</th>
-                                            <th>所属</th>
-                                            <th>お客様</th>
-                                            <th>稼働開始</th>
-                                            <th>稼働終了</th>
-                                            <th></th>
-                                            <th></th>
-                                            <th></th>
-                                            <th></th>
+                                            <th>発注番号</th>
+                                            <th>発注状態</th>
+                                            <th>取引先</th>
+                                            <th>稼働開始連月</th>
+                                            <th>稼働終了連月</th>
+                                            <th>詳細</th>
+                                            <th>注文書</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td><input type="checkbox"></td>
                                             <td>1</td>
-                                            <td>李</td>
+                                            <td>000001</td>
+                                            <td>発注済</td>
                                             <td>会社1</td>
-                                            <td>会社2</td>
                                             <td>202106</td>
                                             <td>202112</td>
-                                            <td><a href="operation_detail.html">詳細</td>
-                                            <td><a href="">見積書</td>
-                                            <td><a href="">請求書</td>
+                                            <td><a href="send_order_regist.html">詳細</td>
                                             <td><a href="">注文書</td>
                                         </tr>
                                         <tr>
                                             <td><input type="checkbox"></td>
                                             <td>2</td>
-                                            <td>趙</td>
-                                            <td>会社1</td>
+                                            <td>000002</td>
+                                            <td>発注済</td>
                                             <td>会社2</td>
                                             <td>202106</td>
                                             <td>202112</td>
-                                            <td><a href="operation_detail.html">詳細</td>
-                                            <td><a href="">見積書</td>
-                                            <td><a href="">請求書</td>
+                                            <td><a href="send_order_regist.html">詳細</td>
                                             <td><a href="">注文書</td>
                                         </tr>
                                         <tr>
                                             <td><input type="checkbox"></td>
                                             <td>3</td>
-                                            <td>王</td>
-                                            <td>会社1</td>
-                                            <td>会社2</td>
+                                            <td>000003</td>
+                                            <td>発注済</td>
+                                            <td>会社3</td>
                                             <td>202106</td>
                                             <td>202112</td>
-                                            <td><a href="operation_detail.html">詳細</td>
-                                            <td><a href="">見積書</td>
-                                            <td><a href="">請求書</td>
+                                            <td><a href="send_order_regist.html">詳細</td>
                                             <td><a href="">注文書</td>
                                         </tr>
                                         <tr>
                                             <td><input type="checkbox"></td>
                                             <td>4</td>
-                                            <td>李</td>
-                                            <td>会社1</td>
-                                            <td>会社2</td>
+                                            <td>000004</td>
+                                            <td>発注済</td>
+                                            <td>会社4</td>
                                             <td>202106</td>
                                             <td>202112</td>
-                                            <td><a href="operation_detail.html">詳細</td>
-                                            <td><a href="">見積書</td>
-                                            <td><a href="">請求書</td>
+                                            <td><a href="send_order_regist.html">詳細</td>
                                             <td><a href="">注文書</td>
                                         </tr>
                                     </tbody>

@@ -13,18 +13,6 @@
 
 button.cannot-delete { display:none; }
 
-html
-{
-    height: 100%;
-    overflow: hidden;
-}
-
-body
-{
-    height: 100%;
-    overflow: hidden;
-}
-
 .employee-info-lable {
     margin-left: 20px; 
     width: 130px;
@@ -38,4 +26,25 @@ body
     margin-left: 30px;
     width: 182.6px;
     height: 26px
+}
+
+.employee-info-name {
+    margin-left: 30px;
+}
+
+.employee-info-name-input {
+    width:154px;
+}
+
+.employeer-info-memo-label {
+    position: absolute;
+    margin-left: 20px;
+    width: 130px;
+}
+
+textarea {
+    width: 400px;
+    height: 200px;
+    resize: none;
+    margin-left: 183px;
 }
