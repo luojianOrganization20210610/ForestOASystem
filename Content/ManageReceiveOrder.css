@@ -33,12 +33,12 @@ button.cannot-delete {
 	display: none;
 }
 
-.oper-info-lable {
+.rec-info-lable {
 	margin-left: 20px;
 	width: 130px;
 }
 
-.feed-select-control {
+.rec-select-control {
 	display: block;
 	width: 300px;
 	height: 26px;
@@ -49,13 +49,13 @@ button.cannot-delete {
 	border-radius: 3px;
 }
 
-.feed-info-select {
+.rec-info-select {
 	margin-left: 20px;
 	width: 182.6px;
 	height: 26px;
 }
 
-.feed-control {
+.rec-control {
 	width: 300px;
 	height: calc(2.25rem + 2px);
 	padding: .375rem .75rem;
@@ -69,7 +69,7 @@ button.cannot-delete {
 	transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-.feed-control.feed-control-border {
+.rec-control.feed-control-border {
 	border-top: 0;
 	border-left: 0;
 	border-right: 0;
@@ -77,37 +77,43 @@ button.cannot-delete {
 	box-shadow: inherit;
 }
 
-.feed-table {
+.rec-table {
 	margin-left: 20px;
 	width: 500px;
 }
 
-.feed-label {
+.rec-label {
 	font-size: 14px;
 	width: 140px;
 }
 
-.feed-info-input {
+.rec-info-input {
 	margin-left: 20px !important;
 	height: 26px;
 	width: 182px;
 }
 
-.feed-info-checkbox {
+.rec-info-checkbox {
 	margin-left: 20px !important;
 }
 
-.feed-info-select {
+.rec-info-select {
 	margin-left: 20px;
 	width: 182px;
 	height: 26px
 }
 
-.feed-form-group {
+.rec-form-group {
 	height: 40px;
 }
 
-.feed-info-date {
+.rec-div-group{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	height: 35px;
+}
+
+.rec-info-date {
 	margin-left: 24px;
 	width: 182px;
 	height: 24px;
@@ -121,3 +127,6 @@ textarea {
 	margin-left: 160px;
 }
 
+.rec-i-but{
+	margin-left: 5px;
+}

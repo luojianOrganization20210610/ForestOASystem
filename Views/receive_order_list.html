@@ -9,7 +9,7 @@
 			rel="stylesheet">
 		<link href="/ForestOASystem/Content/font-awesome.css" rel="stylesheet">
 		<link href="/ForestOASystem/Content/style_v1.css" rel="stylesheet">
-		<link href="/ForestOASystem/Content/ManageFeed.css" rel="stylesheet">
+		<link href="/ForestOASystem/Content/ManageReceiveOrder.css" rel="stylesheet">
 
 		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -91,7 +91,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="feed_list.html" class="ajax-link">
+							<a href="receive_order_list.html" class="ajax-link">
 								<i class="icon-pencil"></i>
 								<span class="hidden-xs">受注</span>
 							</a>
@@ -120,24 +120,27 @@
 							<div class="panel panel-default">
 								<!-- Default panel contents -->
 								<div class="panel-heading">
-									<i class="icon-th-list"></i> <span id="table-title">受注</span>
+									<i class="icon-th-list"></i> <span id="table-title">受注明細一覧</span>
+									<div class="titlemenu-area">
+									    <a href="receive_order_regist.html"><i class="icon-plus"></i>&nbsp;<span class="head-menu">Add</span></a>
+									</div>
 								</div>
 								<div class="panel-body">
-									<div class="feed-form-group">
+									<div class="rec-form-group">
 										<div class="col-sm-8">
 											<div class="" style="float:left">
-												<label class="feed-label">稼働開始年月</label>
+												<label class="rec-label">稼働開始年月</label>
 											</div>
-											<div class='input-group date feed-info-date' id='datetimepicker1'>
+											<div class='input-group date rec-info-date' id='datetimepicker1'>
 												<input type='text' class="timeInput form-control" />
 												<span class="input-group-addon">
 													<span class="glyphicon glyphicon-calendar"></span>
 												</span>
 											</div>
 											<div class="head-div" style="float:left">
-												<label class="feed-label" style="margin-left: 45px;">稼働終了年月</label>
+												<label class="rec-label" style="margin-left: 45px;">稼働終了年月</label>
 											</div>
-											<div class='input-group date date feed-info-date' id='datetimepicker2'>
+											<div class='input-group date date rec-info-date' id='datetimepicker2'>
 												<input type='text' class="timeInput form-control" />
 												<span class="input-group-addon">
 													<span class="glyphicon glyphicon-calendar"></span>
@@ -145,41 +148,55 @@
 											</div>
 										</div>
 									</div>
-									<div class="feed-form-group">
+									<div class="rec-form-group">
 										<div class="col-sm-4">
-											<label class="feed-label">社員ID</label>
-											<input class="feed-info-input">
+											<label class="rec-label">受注番号</label>
+											<input class="rec-info-input" type="text" value="" />
 										</div>
 										<div class="col-sm-8">
-											<label class="feed-label">見積書発行済</label>
-											<input class="feed-info-checkbox" type="checkbox">
+											<label class="rec-label">受注区分</label>
+											<select class="rec-info-select">
+												<option value="0" selected="selected">区分1</option>
+												<option value="1">区分2</option>
+												<option value="2">区分3</option>
+											</select>
 										</div>
 									</div>
-									<div class="feed-form-group">
+									<div class="rec-form-group">
 										<div class="col-sm-4">
-											<label class="feed-label">所属取引先</label>
-											<select class="feed-info-select">
+											<label class="rec-label">社員ID</label>
+											<input class="rec-info-input">
+										</div>
+										<div class="col-sm-8">
+											<label class="rec-label">見積書発行済</label>
+											<input class="rec-info-checkbox" type="checkbox">
+										</div>
+									</div>
+									<div class="rec-form-group">
+										<div class="col-sm-4">
+											<label class="rec-label">所属取引先</label>
+											<select class="rec-info-select">
 												<option value="0" selected="selected">取引先1</option>
 												<option value="1">取引先2</option>
 												<option value="2">取引先3</option>
 											</select>
 										</div>
 										<div class="col-sm-8">
-											<label class="feed-label">請求書発行済</label>
-											<input class="feed-info-checkbox" type="checkbox">
+											<label class="rec-label">請求書発行済</label>
+											<input class="rec-info-checkbox" type="checkbox">
 										</div>
 									</div>
-									<div class="feed-form-group">
+									<div class="rec-form-group">
 										<div class="col-sm-4">
-											<label class="feed-label">新規・継続区分</label>
-											<select class="feed-info-select">
+											<label class="rec-label">新規・継続区分</label>
+											<select class="rec-info-select">
 												<option value="0" selected="selected">新規</option>
 												<option value="1">継続</option>
 											</select>
 										</div>
 										<div class="col-sm-8">
-											<label class="feed-label">注文書発行済</label>
-											<input class="feed-info-checkbox" type="checkbox">
+											<label class="rec-label">注文書発行済</label>
+											<input class="rec-info-checkbox" type="checkbox">
 										</div>
 									</div>
 									<div class="">
@@ -206,11 +223,11 @@
 										<thead>
 											<tr>
 												<th style="width:50px">選択</th>
-												<th>No.</th>
-												<th>所属</th>
+												<th>受注番号</th>
+												<th>取引先</th>
 												<th>お客様</th>
-												<th>稼働開始</th>
-												<th>稼働終了</th>
+												<th>稼働開始年月</th>
+												<th>稼働終了年月</th>
 												<th></th>
 												<th></th>
 												<th></th>
@@ -220,64 +237,64 @@
 										<tbody>
 											<tr>
 												<td><input type="checkbox"></td>
-												<td>1</td>
-												<td>会社1</td>
+												<td>1000001</td>
+												<td>取引先1</td>
 												<td>会社2</td>
 												<td>202106</td>
 												<td>202112</td>
-												<td><a href="feed_regist.html">詳細</td>
-												<td><a href="">見積書</td>
-												<td><a href="">請求書</td>
-												<td><a href="">注文書</td>
+												<td><a href="javascript:void(0);">詳細</td>
+												<td><a href="javascript:void(0);">見積書</td>
+												<td><a href="javascript:void(0);">請求書</td>
+												<td><a href="javascript:void(0);">注文書</td>
 											</tr>
 											<tr>
 												<td><input type="checkbox"></td>
-												<td>2</td>
-												<td>会社1</td>
+												<td>2000001</td>
+												<td>取引先1</td>
 												<td>会社2</td>
 												<td>202106</td>
 												<td>202112</td>
-												<td><a href="feed_regist.html">詳細</td>
-												<td><a href="">見積書</td>
-												<td><a href="">請求書</td>
-												<td><a href="">注文書</td>
+												<td><a href="javascript:void(0);">詳細</td>
+												<td><a href="javascript:void(0);">見積書</td>
+												<td><a href="javascript:void(0);">請求書</td>
+												<td><a href="javascript:void(0);">注文書</td>
 											</tr>
 											<tr>
 												<td><input type="checkbox"></td>
-												<td>3</td>
-												<td>会社1</td>
+												<td>3000001</td>
+												<td>取引先1</td>
 												<td>会社2</td>
 												<td>202106</td>
 												<td>202112</td>
-												<td><a href="feed_regist.html">詳細</td>
-												<td><a href="">見積書</td>
-												<td><a href="">請求書</td>
-												<td><a href="">注文書</td>
+												<td><a href="javascript:void(0);">詳細</td>
+												<td><a href="javascript:void(0);">見積書</td>
+												<td><a href="javascript:void(0);">請求書</td>
+												<td><a href="javascript:void(0);">注文書</td>
 											</tr>
 											<tr>
 												<td><input type="checkbox"></td>
-												<td>4</td>
-												<td>会社1</td>
+												<td>4000001</td>
+												<td>取引先1</td>
 												<td>会社2</td>
 												<td>202106</td>
 												<td>202112</td>
-												<td><a href="feed_regist.html">詳細</td>
-												<td><a href="">見積書</td>
-												<td><a href="">請求書</td>
-												<td><a href="">注文書</td>
+												<td><a href="javascript:void(0);">詳細</td>
+												<td><a href="javascript:void(0);">見積書</td>
+												<td><a href="javascript:void(0);">請求書</td>
+												<td><a href="javascript:void(0);">注文書</td>
 											</tr>
 										</tbody>
 									</table>
 									<div class=" text-center">
 										<ul class="pagination">
-											<li><a href="#">&laquo;</a></li>
-											<li><a href="#">1</a></li>
-											<li><a href="#">2</a></li>
-											<li><a href="#">3</a></li>
-											<li><a href="#">4</a></li>
-											<li><a href="#">5</a></li>
-											<li><a href="#">6</a></li>
-											<li><a href="#">&raquo;</a></li>
+											<li><a href="javascript:void(0);">&laquo;</a></li>
+											<li><a href="javascript:void(0);">1</a></li>
+											<li><a href="javascript:void(0);">2</a></li>
+											<li><a href="javascript:void(0);">3</a></li>
+											<li><a href="javascript:void(0);">4</a></li>
+											<li><a href="javascript:void(0);">5</a></li>
+											<li><a href="javascript:void(0);">6</a></li>
+											<li><a href="javascript:void(0);">&raquo;</a></li>
 										</ul>
 									</div>
 								</div>
