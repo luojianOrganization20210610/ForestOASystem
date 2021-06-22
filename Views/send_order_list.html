@@ -8,7 +8,7 @@
     <link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link href="/ForestOASystem/Content/font-awesome.css" rel="stylesheet">
     <link href="/ForestOASystem/Content/style_v1.css" rel="stylesheet">
-    <link href="/ForestOASystem/Content/ManageOperation.css" rel="stylesheet">
+    <link href="/ForestOASystem/Content/ManageSendOrder.css" rel="stylesheet">
 
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -124,21 +124,21 @@
                                 </div>
                             </div>
                             <div class="panel-body">
-                                <div class="oper-form-group">
+                                <div class="sendorder-form-group">
                                     <div class="col-sm-8">
                                         <div class="" style="float:left">
-                                            <label class="oper-label">稼働開始年月</label>
+                                            <label class="sendorder-label">稼働開始年月</label>
                                         </div>
-                                        <div class='input-group date oper-info-date' id='datetimepicker1'>
+                                        <div class='input-group date sendorder-info-date' id='datetimepicker1'>
                                             <input type='text' class="timeInput form-control" />
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-calendar"></span>
                                             </span>
                                         </div>
                                         <div class="head-div" style="float:left">
-                                            <label class="oper-label" style="margin-left: 45px;">稼働終了年月</label>
+                                            <label class="sendorder-label" style="margin-left: 45px;">稼働終了年月</label>
                                         </div>
-                                        <div class='input-group date date oper-info-date' id='datetimepicker2'>
+                                        <div class='input-group date date sendorder-info-date' id='datetimepicker2'>
                                             <input type='text' class="timeInput form-control" />
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-calendar"></span>
@@ -146,20 +146,20 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="oper-form-group">
+                                <div class="sendorder-form-group">
                                     <div class="col-sm-4">
-                                        <label class="oper-label">発注番号</label>
-                                        <input class="oper-info-input">
+                                        <label class="sendorder-label">発注番号</label>
+                                        <input class="sendorder-info-input">
                                     </div>
                                     <div class="col-sm-8">
-                                        <label class="oper-label">注文書発行済</label>
-                                        <input class="oper-info-checkbox" type="checkbox">
+                                        <label class="sendorder-label">注文書発行済</label>
+                                        <input class="sendorder-info-checkbox" type="checkbox">
                                     </div>
                                 </div>
-                                <div class="oper-form-group">
+                                <div class="sendorder-form-group">
                                     <div class="col-sm-4">
-                                        <label class="oper-label">発注区分</label>
-                                        <select class="oper-info-select">
+                                        <label class="sendorder-label">発注区分</label>
+                                        <select class="sendorder-info-select">
                                             <option value="0" selected="selected">記入済</option>
                                             <option value="1">発注済</option>
                                             <option value="2">取消済</option>
@@ -168,10 +168,10 @@
                                     <div class="col-sm-8">
                                     </div>
                                 </div>
-                                <div class="oper-form-group">
+                                <div class="sendorder-form-group">
                                     <div class="col-sm-4">
-                                        <label class="oper-label">取引先</label>
-                                        <select class="oper-info-select">
+                                        <label class="sendorder-label">取引先</label>
+                                        <select class="sendorder-info-select">
                                             <option value="0" selected="selected">取引先1</option>
                                             <option value="1">取引先2</option>
                                             <option value="2">取引先3</option>
@@ -180,10 +180,10 @@
                                     <div class="col-sm-8">
                                     </div>
                                 </div>
-                                <div class="oper-form-group">
+                                <div class="sendorder-form-group">
                                     <div class="col-sm-4">
-                                        <label class="oper-label">得意先</label>
-                                        <select class="oper-info-select">
+                                        <label class="sendorder-label">得意先</label>
+                                        <select class="sendorder-info-select">
                                             <option value="0" selected="selected">得意先1</option>
                                             <option value="1">得意先2</option>
                                             <option value="2">得意先3</option>
@@ -206,8 +206,8 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-6　text-left">
-                                        <div><input type="radio" name="exportG" style="width:30px" /><label class="oper-label">一括出力</label></div>
-                                        <div><input type="radio" name="exportG" style="width:30px" /><label class="oper-label">個別出力</label></div>
+                                        <div><input type="radio" name="exportG" style="width:30px" /><label class="sendorder-label">一括出力</label></div>
+                                        <div><input type="radio" name="exportG" style="width:30px" /><label class="sendorder-label">個別出力</label></div>
                                     </div>
                                     <div>
                                     </div>
@@ -222,8 +222,8 @@
                                             <th>発注番号</th>
                                             <th>発注状態</th>
                                             <th>取引先</th>
-                                            <th>稼働開始連月</th>
-                                            <th>稼働終了連月</th>
+                                            <th>稼働開始年月</th>
+                                            <th>稼働終了年月</th>
                                             <th>詳細</th>
                                             <th>注文書</th>
                                         </tr>
