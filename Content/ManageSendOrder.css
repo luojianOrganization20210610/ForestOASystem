@@ -173,6 +173,11 @@ button.cannot-delete {
 
 .sendorder-label {
 	font-size: 14px;
+	width: 140px;
+}
+
+.sendorder-label2 {
+	font-size: 14px;
 	width: 180px;
 }
 
@@ -190,10 +195,6 @@ button.cannot-delete {
 	margin-left: 20px;
 	width: 182px;
 	height: 26px
-}
-
-.sendorder-form-group {
-	height: 40px;
 }
 
 .sendorder-info-date {
