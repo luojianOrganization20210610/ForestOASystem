@@ -33,12 +33,59 @@ button.cannot-delete {
 	display: none;
 }
 
-.oper-info-lable {
+.sendorder-info-lable {
 	margin-left: 20px;
 	width: 130px;
 }
 
-.feed-select-control {
+textarea {
+	width: 400px;
+	height: 200px;
+	resize: none;
+	margin-left: 205px;
+}
+
+#filter-area {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+#table-title {
+	font-weight: bold;
+}
+
+#datalist thead {
+	background-color: #f5f5f5;
+	border-color: #ddd;
+}
+
+.panel-heading .titlemenu-area {
+	float: right;
+}
+
+#delete-dialog .modal-dialog {
+	width: 520px;
+}
+
+#delete-dialog .modal-dialog .box {
+	margin: auto;
+}
+
+#delete-dialog .modal-dialog .box .box-content .footer-buttons {
+	text-align: right;
+	margin-right: 15px;
+}
+
+button.cannot-delete {
+	display: none;
+}
+
+.sendorder-info-lable {
+	margin-left: 20px;
+	width: 130px;
+}
+
+.sendorder-select-control {
 	display: block;
 	width: 300px;
 	height: 26px;
@@ -49,13 +96,12 @@ button.cannot-delete {
 	border-radius: 3px;
 }
 
-.feed-info-select {
-	margin-left: 20px;
-	width: 182.6px;
-	height: 26px;
+.sendorder-div {
+	display: block;
+	width: 100%;
 }
 
-.feed-control {
+.sendorder-control {
 	width: 300px;
 	height: calc(2.25rem + 2px);
 	padding: .375rem .75rem;
@@ -69,7 +115,7 @@ button.cannot-delete {
 	transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-.feed-control.feed-control-border {
+.sendorder-control.sendorder-control-border {
 	border-top: 0;
 	border-left: 0;
 	border-right: 0;
@@ -77,47 +123,83 @@ button.cannot-delete {
 	box-shadow: inherit;
 }
 
-.feed-table {
+.sendorder-form-group {
+	height: 40px;
+}
+
+.sendorder-select-control {
+	display: block;
+	width: 300px;
+	height: 26px;
+	padding: .375rem .75rem;
+	margin-left: 20px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.sendorder-info-select {
+	margin-left: 20px;
+	width: 182.6px;
+	height: 26px;
+}
+
+.sendorder-control {
+	width: 300px;
+	height: calc(2.25rem + 2px);
+	padding: .375rem .75rem;
+	font-size: 1.4rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #495057;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.sendorder-control.sendorder-control-border {
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-radius: 0;
+	box-shadow: inherit;
+}
+
+.sendorder-table {
 	margin-left: 20px;
 	width: 500px;
 }
 
-.feed-label {
+.sendorder-label {
 	font-size: 14px;
-	width: 140px;
+	width: 180px;
 }
 
-.feed-info-input {
+.sendorder-info-input {
 	margin-left: 20px !important;
 	height: 26px;
 	width: 182px;
 }
 
-.feed-info-checkbox {
+.sendorder-info-checkbox {
 	margin-left: 20px !important;
 }
 
-.feed-info-select {
+.sendorder-info-select {
 	margin-left: 20px;
 	width: 182px;
 	height: 26px
 }
 
-.feed-form-group {
+.sendorder-form-group {
 	height: 40px;
 }
 
-.feed-info-date {
+.sendorder-info-date {
 	margin-left: 24px;
 	width: 182px;
 	height: 24px;
 	float: left
-}
-
-textarea {
-	width: 400px;
-	height: 200px;
-	resize: none;
-	margin-left: 160px;
 }
 
