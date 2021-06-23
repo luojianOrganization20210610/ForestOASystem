@@ -107,7 +107,7 @@ button.cannot-delete {
 	height: 40px;
 }
 
-.rec-div-group{
+.rec-div-group {
 	margin-top: 5px;
 	margin-bottom: 5px;
 	height: 35px;
@@ -120,13 +120,40 @@ button.cannot-delete {
 	float: left
 }
 
-textarea {
-	width: 400px;
-	height: 200px;
-	resize: none;
-	margin-left: 160px;
+textarea,
+input,
+select {
+	border-radius: 0.25rem;
+	border: 1px solid #a2a7ab;
+	padding: 0.5px 8px;
 }
 
-.rec-i-but{
+.rec-info-textarea {
+	width: 680px;
+	height: 60px;
+	resize: none;
+}
+
+.rec-i-but {
 	margin-left: 5px;
+}
+
+.rec-employee-form {
+	border: 1px solid #D6D6D6;
+	padding: 10px;
+	width: 60%;
+	height: 200px;
+	margin-left: 24px;
+}
+
+.rec-scrollbar {
+	overflow: auto;
+	height: 140px
+}
+
+.rec-employee-group {
+	float: left;
+	position: relative;
+	min-height: 1px;
+	padding-left: 15px;
 }

@@ -118,7 +118,13 @@
 									<i class="icon-th-list"></i>&nbsp;<span id="table-title">受注</span>
 								</div>
 								<div class="panel-body">
-									<div class="rec-div-group">
+									<div class="col-sm-12 form-group">
+										<div class="col-sm-12">
+											<label class="rec-label">受注番号</label>
+											<input type="text" class="rec-info-input" disabled="disabled" />
+										</div>
+									</div>
+									<div class="col-sm-12 form-group">
 										<div class="col-sm-12">
 											<div style="float:left">
 												<label class="rec-label">稼働開始年月</label>
@@ -131,7 +137,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="rec-div-group">
+									<div class="col-sm-12 form-group">
 										<div class="col-sm-12">
 											<div style="float:left">
 												<label class="rec-label">稼働終了年月</label>
@@ -144,13 +150,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="rec-div-group">
-										<div class="col-sm-12">
-											<label class="rec-label">受注番号</label>
-											<input class="rec-info-input" />
-										</div>
-									</div>
-									<div class="rec-div-group">
+									<div class="col-sm-12 form-group">
 										<div class="col-sm-12">
 											<label class="rec-label">派遣先取引先</label>
 											<select class="rec-info-select" name="">
@@ -160,29 +160,7 @@
 											</select>
 										</div>
 									</div>
-									<div id="addOpts" class="rec-div-group">
-										<div class="col-sm-4">
-											<label class="rec-label">社員</label>
-											<input class="rec-info-input" />
-										</div>
-										<div class="col-sm-8">
-											<label class="rec-label">契約単価（税抜）</label>
-											<input class="rec-info-input" />
-											<a class="btn"><i class="icon-plus rec-i-but" onclick="addInput()"></i></a>
-										</div>
-									</div>
-
-									<div class="rec-div-group">
-										<div class="col-sm-12">
-											<label class="rec-label">精算方法</label>
-											<select class="rec-info-select" name="pay">
-												<option value="0" selected="selected">精算1</option>
-												<option value="1">精算2</option>
-												<option value="2">精算3</option>
-											</select>
-										</div>
-									</div>
-									<div class="rec-div-group">
+									<div class="col-sm-12 form-group">
 										<div class="col-sm-12">
 											<label class="rec-label">所属区分</label>
 											<select class="rec-info-select" name="divide">
@@ -192,43 +170,139 @@
 											</select>
 										</div>
 									</div>
-									<div class="rec-div-group">
-										<div class="col-sm-12">
-											<label class="rec-label">現場</label>
-											<input class="rec-info-input" />
-										</div>
-									</div>
-									<div class="rec-div-group">
+									<div class="col-sm-12 form-group">
 										<div class="col-sm-12">
 											<label class="rec-label">控除基準時間（下限）</label>
-											<input class="rec-info-input" />
+											<input type="text" class="rec-info-input" />
 										</div>
 									</div>
-									<div class="rec-div-group">
-										<div class="col-sm-12">
+									<div class="col-sm-12 form-group">
+										<div class="col-sm-8">
 											<label class="rec-label">超過基準時間（上限）</label>
-											<input class="rec-info-input" />
+											<input type="text" class="rec-info-input" />
 										</div>
 									</div>
-									<div class="rec-div-group">
-										<div class="col-sm-12">
+									<div class="col-sm-12 form-group">
+										<div class="col-sm-8">
 											<label class="rec-label">注文請書発送日</label>
-											<input class="rec-info-input" />
+											<input type="text" class="rec-info-input" />
 										</div>
 									</div>
-									<div class="rec-div-group">
-										<div class="col-sm-12">
-											<label class="rec-label">PC貸与</label>
-											<select class="rec-info-select" name="yesorno">
-												<option value="0" selected="selected">是</option>
-												<option value="1">否</option>
-											</select>
+									<div id="employee-form" class="col-sm-12 form-group">
+										<div class="rec-employee-group" >
+											<label class="rec-label">技術者</label>
+										</div>
+										<div class="col-sm-10 cover rec-employee-form">
+											<div class="rec-scrollbar">
+												<table class="table" style="font-size: 14px;">
+													<thead>
+														<th>選択</th>
+														<th>No.</th>
+														<th>技術者</th>
+														<th>支払単価（税抜）</th>
+														<th>支払精算方法</th>
+														<th>PC貸与</th>
+														<th>現場</th>
+													</thead>
+													<tbody>
+														<tr>
+															<td><input type="checkbox"></td>
+															<td>1</td>
+															<td>王</td>
+															<td>1000000</td>
+															<td>
+																<select name="pay">
+																	<option value="0" selected="selected">精算方法1</option>
+																	<option value="1">精算方法2</option>
+																	<option value="2">精算方法3</option>
+																</select>
+															</td>
+															<td>
+																<select name="yesorno">
+																	<option value="0" selected="selected">是</option>
+																	<option value="1">否</option>
+																</select>
+															</td>
+															<td>新宿1-1-1-101</td>
+														</tr>
+														<tr>
+															<td><input type="checkbox"></td>
+															<td>2</td>
+															<td>李</td>
+															<td>1000000</td>
+															<td>
+																<select name="pay">
+																	<option value="0" selected="selected">精算方法1</option>
+																	<option value="1">精算方法2</option>
+																	<option value="2">精算方法3</option>
+																</select>
+															</td>
+															<td>
+																<select name="yesorno">
+																	<option value="0" selected="selected">是</option>
+																	<option value="1">否</option>
+																</select>
+															</td>
+															<td>渋谷1-1-1-101</td>
+														</tr>
+														<tr>
+															<td><input type="checkbox"></td>
+															<td>3</td>
+															<td>黄</td>
+															<td>1000000</td>
+															<td>
+																<select name="pay">
+																	<option value="0" selected="selected">精算方法1</option>
+																	<option value="1">精算方法2</option>
+																	<option value="2">精算方法3</option>
+																</select>
+															</td>
+															<td>
+																<select name="yesorno">
+																	<option value="0" selected="selected">是</option>
+																	<option value="1">否</option>
+																</select>
+															</td>
+															<td>有明1-1-1-101</td>
+														</tr>
+														<tr>
+															<td><input type="checkbox"></td>
+															<td>4</td>
+															<td>田中</td>
+															<td>1000000</td>
+															<td>
+																<select name="pay">
+																	<option value="0" selected="selected">精算方法1</option>
+																	<option value="1">精算方法2</option>
+																	<option value="2">精算方法3</option>
+																</select>
+															</td>
+															<td>
+																<select name="yesorno">
+																	<option value="0" selected="selected">是</option>
+																	<option value="1">否</option>
+																</select>
+															</td>
+															<td>池袋1-1-1-101</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="text-left" style="margin-top:10px">
+												<button type="button" class="btn-success btn-sm"><i
+														class="icon-pencil"></i>追加</button>
+												<button type="button" class="btn-danger btn-sm"><i
+														class="icon-trash"></i>削除</button>
+											</div>
 										</div>
 									</div>
-									<div class="rec-div-group">
-										<div class="col-sm-12">
-											<label class="rec-label" style="position: absolute;">備考</label>
-											<textarea type="text" value=""></textarea>
+
+									<div id="receiveMemo" class="col-sm-12">
+										<div class="rec-employee-group">
+											<label class="rec-label">備考</label>
+										</div>
+										<div class="col-sm-10" style="margin-left: 10px;">
+											<textarea type="text" value="" class="rec-info-textarea"></textarea>
 										</div>
 									</div>
 								</div>
@@ -247,33 +321,5 @@
 				</div>
 			</div>
 		</div>
-		<script>
-			var empeeId = 1;
-
-			function addInput() {
-
-				var addcontent = '';
-
-				addcontent += '<div id="empId' + empeeId + '" class="rec-div-group">';
-				addcontent += '<div class="col-sm-4">';
-				addcontent += '<label class="rec-label">社員</label>';
-				addcontent += '<input class="rec-info-input" /></div>';
-				addcontent += '<div class="col-sm-8">';
-				addcontent += '<label class="rec-label">契約単価（税抜）</label>';
-				addcontent += '<input class="rec-info-input" />';
-				addcontent += '<a class="btn"><i class="icon-remove rec-i-but" onclick="delInput(' + empeeId + ')"></i></a></div></div>';
-
-				$("#addOpts").after(addcontent);
-
-				empeeId++;
-			}
-
-
-
-			function delInput(id) {
-				var del = "empId" + id;
-				$("#" + del).remove();
-			}
-		</script>
 	</body>
 </html>
