@@ -27,23 +27,34 @@
                 format: 'YYYY-MM-DD',
                 locale: moment.locale('en')
             });
+            var picker3 = $('#datetimepicker3').datetimepicker({
+                format: 'YYYY-MM-DD',
+                locale: moment.locale('en')
+            });
             //动态设置最小值
             picker1.on('dp.change', function (e) {
                 picker2.data('DateTimePicker').minDate(e.date);
             });
-            //动态设置最大值
             picker2.on('dp.change', function (e) {
+                picker1.data('DateTimePicker').maxDate(e.date);
+            });
+            picker3.on('dp.change', function (e) {
                 picker1.data('DateTimePicker').maxDate(e.date);
             });
         });
         $('#datetimepicker1').datetimepicker({
             format: 'YYYY-MM-DD',
-            locale: moment.locale('zh-cn'),
+            locale: moment.locale('cn'),
             defaultDate: "2018-1-1"
         });
         $('#datetimepicker2').datetimepicker({
             format: 'YYYY-MM-DD',
-            locale: moment.locale('zh-cn'),
+            locale: moment.locale('cn'),
+            defaultDate: "2028-1-1"
+        });
+        $('#datetimepicker3').datetimepicker({
+            format: 'YYYY-MM-DD',
+            locale: moment.locale('cn'),
             defaultDate: "2028-1-1"
         });
     </script>
@@ -145,7 +156,24 @@
                                 </div>
                                 <div class="oper-form-group">
                                     <div class="col-sm-4">
-                                        <label class="oper-label">技術者</label>
+                                        <div class="" style="float:left">
+                                            <label class="oper-label">稼働年月</label>
+                                        </div>
+                                        <div class='input-group date oper-info-date' id='datetimepicker3'>
+                                            <input type='text' class="timeInput form-control" />
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <label class="oper-label">勤務表調整済</label>
+                                        <input class="oper-info-checkbox" type="checkbox">
+                                    </div>
+                                </div>
+                                <div class="oper-form-group">
+                                    <div class="col-sm-4">
+                                        <label class="oper-label">社員番号</label>
                                         <input class="oper-info-input">
                                     </div>
                                     <div class="col-sm-8">
@@ -155,12 +183,8 @@
                                 </div>
                                 <div class="oper-form-group">
                                     <div class="col-sm-4">
-                                        <label class="oper-label">取引先</label>
-                                        <select class="oper-info-select">
-                                            <option value="0" selected="selected">取引先1</option>
-                                            <option value="1">取引先2</option>
-                                            <option value="2">取引先3</option>
-                                        </select>
+                                        <label class="oper-label">社員名前</label>
+                                        <input class="oper-info-input">
                                     </div>
                                     <div class="col-sm-8">
                                         <label class="oper-label">請求書発行済</label>
@@ -169,23 +193,15 @@
                                 </div>
                                 <div class="oper-form-group">
                                     <div class="col-sm-4">
-                                        <label class="oper-label">得意先</label>
+                                        <label class="oper-label">派遣先取引先</label>
                                         <select class="oper-info-select">
-                                            <option value="0" selected="selected">得意先1</option>
-                                            <option value="1">得意先2</option>
-                                            <option value="2">得意先3</option>
+                                            <option value="0" selected="selected">取引先1</option>
+                                            <option value="1">取引先2</option>
+                                            <option value="2">取引先3</option>
                                         </select>
                                     </div>
                                     <div class="col-sm-8">
                                         <label class="oper-label">注文書発行済</label>
-                                        <input class="oper-info-checkbox" type="checkbox">
-                                    </div>
-                                </div>
-                                <div class="oper-form-group">
-                                    <div class="col-sm-4">
-                                    </div>
-                                    <div class="col-sm-8">
-                                        <label class="oper-label">勤務表調整済</label>
                                         <input class="oper-info-checkbox" type="checkbox">
                                     </div>
                                 </div>
@@ -212,32 +228,36 @@
                                     </div>
                                 </div>
                                 <!-- Table -->
-                                <table id="datalist" class="table">
+                                <table id="datalist" class="table" >
 
                                     <thead>
                                         <tr>
                                             <th style="width:50px">選択</th>
                                             <th>No.</th>
-                                            <th>技術者</th>
-                                            <th>所属</th>
-                                            <th>お客様</th>
-                                            <th>稼働開始</th>
-                                            <th>稼働終了</th>
-                                            <th></th>
-                                            <th></th>
-                                            <th></th>
-                                            <th></th>
+                                            <th>社員番号</th>
+                                            <th>社員名前</th>
+                                            <th>所属会社</th>
+                                            <th>派遣先取引先</th>
+                                            <th>稼働開始年月</th>
+                                            <th>稼働終了年月</th>
+                                            <th>稼働年月</th>
+                                            <th>詳細</th>
+                                            <th>見積書</th>
+                                            <th>請求書</th>
+                                            <th>注文書</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td><input type="checkbox"></td>
                                             <td>1</td>
+                                            <td>001</td>
                                             <td>李</td>
                                             <td>会社1</td>
                                             <td>会社2</td>
                                             <td>202106</td>
                                             <td>202112</td>
+                                            <td>202106</td>
                                             <td><a href="operation_detail.html">詳細</td>
                                             <td><a href="">見積書</td>
                                             <td><a href="">請求書</td>
@@ -246,11 +266,13 @@
                                         <tr>
                                             <td><input type="checkbox"></td>
                                             <td>2</td>
+                                            <td>002</td>
                                             <td>趙</td>
                                             <td>会社1</td>
                                             <td>会社2</td>
                                             <td>202106</td>
                                             <td>202112</td>
+                                            <td>202106</td>
                                             <td><a href="operation_detail.html">詳細</td>
                                             <td><a href="">見積書</td>
                                             <td><a href="">請求書</td>
@@ -259,11 +281,13 @@
                                         <tr>
                                             <td><input type="checkbox"></td>
                                             <td>3</td>
+                                            <td>003</td>
                                             <td>王</td>
                                             <td>会社1</td>
                                             <td>会社2</td>
                                             <td>202106</td>
                                             <td>202112</td>
+                                            <td>202106</td>
                                             <td><a href="operation_detail.html">詳細</td>
                                             <td><a href="">見積書</td>
                                             <td><a href="">請求書</td>
@@ -272,11 +296,13 @@
                                         <tr>
                                             <td><input type="checkbox"></td>
                                             <td>4</td>
+                                            <td>004</td>
                                             <td>李</td>
                                             <td>会社1</td>
                                             <td>会社2</td>
                                             <td>202106</td>
                                             <td>202112</td>
+                                            <td>202106</td>
                                             <td><a href="operation_detail.html">詳細</td>
                                             <td><a href="">見積書</td>
                                             <td><a href="">請求書</td>

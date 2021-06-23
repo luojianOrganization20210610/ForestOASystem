@@ -85,19 +85,19 @@
                             <div class="oper-div">
                                 <div class="form-group">
                                     <label class="oper-info-lable">技術者氏名</label>
-                                    <input class="oper-control oper-control-border" type="text" value="技術者 一郎" />
+                                    <input class="oper-control oper-control-border" type="text" value="技術者 一郎" disabled="disabled" />
                                 </div>
                                 <div class="form-group">
                                     <label class="oper-info-lable">所属会社</label>
-                                    <input class="oper-control oper-control-border" type="text" value="Forest 株式会社" />
+                                    <input class="oper-control oper-control-border" type="text" value="Forest 株式会社" disabled="disabled" />
                                 </div>
 								<div class="form-group">
-								    <label class="oper-info-lable">お客様</label>
-								    <input class="oper-control oper-control-border" type="text" value="XXXXXXX 株式会社" />
+								    <label class="oper-info-lable">派遣先取引先</label>
+								    <input class="oper-control oper-control-border" type="text" value="XXXXXXX 株式会社" disabled="disabled" />
 								</div>
 								<div class="form-group">
 								    <label class="oper-info-lable">稼働年月</label>
-								    <input class="oper-control oper-control-border" type="text" value="２０２１年６月" />
+								    <input class="oper-control oper-control-border" type="text" value="２０２１年６月"  disabled="disabled"/>
 								</div>
 								<!-- select multiple -->
 								<div class="row">
@@ -119,68 +119,58 @@
 													</tr>
 													<tr>
 														<td>2.</td>
-														<td>稼働年月</td>
+														<td>稼働開始年月</td>
 														<td>2021年06月</td>
 													</tr>
 													<tr>
 														<td>3.</td>
-														<td>発注単価</td>
-														<td>1,000,000</td>
+														<td>稼働終了年月</td>
+														<td>2021年12月</td>
 													</tr>
 													<tr>
 														<td>4.</td>
-														<td>特別精算</td>
-														<td></td>
+														<td>発注区分</td>
+														<td>区分1</td>
 													</tr>
 													<tr>
 														<td>5.</td>
-														<td>控除基準時間（下限）</td>
-														<td></td>
+														<td>発注状態</td>
+														<td>発注済</td>
 													</tr>
 													<tr>
 														<td>6.</td>
-														<td>超過基準時間（上限）</td>
-														<td></td>
+														<td>注文書送付日</td>
+														<td>20210601</td>
 													</tr>
 													<tr>
 														<td>7.</td>
-														<td>控除単価</td>
-														<td></td>
+														<td>注文請書回収日</td>
+														<td>20210630</td>
 													</tr>
 													<tr>
 														<td>8.</td>
-														<td>超過単価</td>
-														<td></td>
+														<td>支払単価（税抜）</td>
+														<td>1000000</td>
 													</tr>
 													<tr>
 														<td>9.</td>
-														<td>精算単位</td>
-														<td></td>
+														<td>支払精算方法</td>
+														<td>精算方法1</td>
 													</tr>
 													<tr>
 														<td>10.</td>
-														<td>稼働時間</td>
-														<td></td>
+														<td>支払控除基準時間（下限）</td>
+														<td>140</td>
 													</tr>
 													<tr>
 														<td>11.</td>
-														<td>承認時間</td>
-														<td></td>
+														<td>支払超過基準時間（上限）</td>
+														<td>180</td>
 													</tr>
 													<tr>
 														<td>12.</td>
-														<td>控除額</td>
-														<td></td>
-													</tr>
-													<tr>
-														<td>13.</td>
-														<td>超過額</td>
-														<td></td>
-													</tr>
-													<tr>
-														<td>14.</td>
-														<td>その他費用</td>
-														<td></td>
+														<td>現場</td>
+														<td>新宿1-1-1-101</td>
 													</tr>
 												</tbody>
 											</table>
@@ -191,8 +181,8 @@
 											<table class="table oper-table">
 												<thead>
 													<tr>
-														<th style="width: 50px;">受注</th>
-														<th></th>
+														<th width="50px">受注</th>
+														<th>（月別稼働実績入力）</th>
 														<th></th>
 													</tr>
 												</thead>
@@ -205,77 +195,86 @@
 													<tr>
 														<td>2.</td>
 														<td>稼働開始年月</td>
-														<td>2021年06月01日</td>
+														<td>2021年06月</td>
 													</tr>
 													<tr>
 														<td>3.</td>
 														<td>稼働終了年月</td>
-														<td>2021年06月30日</td>
+														<td>2021年012月</td>
 													</tr>
 													<tr>
 														<td>4.</td>
-														<td>契約単価（税抜）</td>
-														<td></td>
+														<td>受注区分</td>
+														<td>受注区分1</td>
 													</tr>
 													<tr>
 														<td>5.</td>
-														<td>精算方法</td>
-														<td></td>
+														<td>
+															契約単価（税抜）
+														</td>
+														<td>1000000</td>
 													</tr>
 													<tr>
 														<td>6.</td>
-														<td>控除基準時間（下限）</td>
-														<td></td>
+														<td>
+															精算方法
+														</td>
+														<td>精算方法1</td>
 													</tr>
 													<tr>
 														<td>7.</td>
-														<td>超過基準時間（上限）</td>
-														<td></td>
+														<td>控除基準時間（下限）</td>
+														<td>140</td>
 													</tr>
 													<tr>
 														<td>8.</td>
-														<td>社員給与金額</td>
-														<td></td>
+														<td>超過基準時間（上限）</td>
+														<td>180</td>
 													</tr>
 													<tr>
 														<td>9.</td>
-														<td>支払単価（税抜）</td>
-														<td></td>
+														<td>社員給与金額</td>
+														<td>800000</td>
 													</tr>
 													<tr>
 														<td>10.</td>
-														<td>支払精算方法</td>
-														<td></td>
+														<td>注文請書発送日</td>
+														<td>20210601</td>
 													</tr>
 													<tr>
 														<td>11.</td>
-														<td>支払控除基準時間（下限）</td>
-														<td></td>
+														<td>稼働時間</td>
+														<td><input class="oper-detail-input" /></td>
 													</tr>
 													<tr>
 														<td>12.</td>
-														<td>支払超過基準時間（上限）</td>
-														<td></td>
+														<td>承認時間</td>
+														<td><input class="oper-detail-input" /></td>
 													</tr>
 													<tr>
 														<td>13.</td>
-														<td>注文請書発送日</td>
-														<td></td>
+														<td>控除額</td>
+														<td><input class="oper-detail-input" /></td>
 													</tr>
 													<tr>
 														<td>14.</td>
-														<td>注文請書回収日</td>
-														<td></td>
+														<td>超過額</td>
+														<td><input class="oper-detail-input" /></td>
+													</tr>
+													<tr>
+														<td>15.</td>
+														<td>その他費用</td>
+														<td><input class="oper-detail-input" /></td>
 													</tr>
 												</tbody>
 											</table>
 										</div>
 									</div>
 								</div>
-                                <div class="text-center" style="margin-bottom: 10px;">
-									<button class="btn btn-primary" type="button" onclick="history.back()">戻る</button>
-                                    <!-- <a href="#" class="btn btn-default">取消</a> -->
-                                </div>
+								<div class="text-center" style="margin-bottom: 10px;">
+									<button type="submit" class="btn btn-primary">登録</button>
+									<a href="operation_list.html" class="btn btn-default">取消</a>
+								</div>
                             </div>
                         </div>
                     </div>

@@ -155,3 +155,7 @@ button.cannot-delete {
 	height: 24px;
 	float: left
 }
+
+.oper-detail-input {
+	width: 100px;
+}
