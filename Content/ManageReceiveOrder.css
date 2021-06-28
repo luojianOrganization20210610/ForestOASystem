@@ -157,3 +157,18 @@ select {
 	min-height: 1px;
 	padding-left: 15px;
 }
+
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.rec-input {
+	width: 90px;
+}
+
+.rec-select {
+	width: 90px;
+}
