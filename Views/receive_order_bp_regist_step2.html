@@ -1,0 +1,214 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Forest OA System</title>
+		<link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="/ForestOASystem/Content/font-awesome.css" rel="stylesheet">
+		<link href="/ForestOASystem/Content/style_v1.css" rel="stylesheet">
+		<link href="/ForestOASystem/Content/ManageReceiveOrder.css" rel="stylesheet">
+
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://cdn.bootcss.com/moment.js/2.22.0/moment-with-locales.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js">
+		</script>
+		<script>
+			$(function() {
+				$('#form1').hide();
+				var picker1 = $('#datetimepicker1').datetimepicker({
+					format: 'YYYY-MM-DD',
+					locale: moment.locale('en'),
+					//minDate: '2016-7-1'
+				});
+                var picker2 = $('#datetimepicker2').datetimepicker({
+                    format: 'YYYY-MM-DD',
+                    locale: moment.locale('en'),
+                    //minDate: '2016-7-1'
+				});
+                var picker3 = $('#datetimepicker3').datetimepicker({
+                    format: 'YYYY-MM-DD',
+                    locale: moment.locale('en'),
+                    //minDate: '2016-7-1'
+                });
+			});
+			$('#datetimepicker1').datetimepicker({
+				format: 'YYYY-MM-DD',
+				locale: moment.locale('zh-cn'),
+				defaultDate: "2018-1-1"
+			});
+            $('#datetimepicker2').datetimepicker({
+                format: 'YYYY-MM-DD',
+                locale: moment.locale('zh-cn'),
+                defaultDate: "2018-1-1"
+			});
+            $('#datetimepicker3').datetimepicker({
+                format: 'YYYY-MM-DD',
+                locale: moment.locale('zh-cn'),
+                defaultDate: "2018-1-1"
+            });
+		</script>
+	</head>
+	<body>
+		<!--Start header-->
+		<header class="navbar">
+			<div class="container-fluid expanded-panel">
+				<div class="row">
+					<div id="top-panel" class="col-xs-12 col-sm-12">
+						<div class="row">
+							<div class="col-xs-8 col-sm-2">
+								<div class="systemName">Forest OA System</div>
+							</div>
+							<div class="col-xs-4 col-sm-10 top-panel-right">
+								<div class="loginUserName">
+									<span>admin</span>
+									<i class="icon-angle-down pull-right" style="margin-top: 20px;"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div id="main" class="container-fluid">
+			<div class="row">
+				<!--Start Sidebar-->
+				<div id="sidebar-left" class="col-xs-2 col-sm-2">
+					<ul class="nav main-menu">
+						<li>
+							<a href="employee_master.html" class="ajax-link">
+								<i class="icon-group"></i>
+								<span class="hidden-xs">社員マスター</span>
+							</a>
+						</li>
+						<li>
+							<a href="customer_master.html" class="ajax-link">
+								<i class="icon-tags"></i>
+								<span class="hidden-xs">取引先マスター</span>
+							</a>
+						</li>
+						<li>
+							<a href="receive_order_list.html" class="ajax-link">
+								<i class="icon-pencil"></i>
+								<span class="hidden-xs">受注</span>
+							</a>
+						</li>
+						<li>
+							<a href="receive_order_bp_list.html" class="ajax-link">
+								<i class="icon-pencil"></i>
+								<span class="hidden-xs">BP受注</span>
+							</a>
+						</li>
+						<li>
+							<a href="charge_list.html" class="ajax-link">
+								<i class="icon-th-list"></i>
+								<span class="hidden-xs">請求</span>
+							</a>
+						</li>
+						<li>
+							<a href="charge_bp_list.html" class="ajax-link">
+								<i class="icon-th-list"></i>
+								<span class="hidden-xs">BP請求</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!--End Sidebar-->
+				<!--Start Content-->
+				<div id="content" class="col-xs-12 col-sm-10">
+					<div id="ajax-content">
+
+						<div id="datalist-home" data-role="page" class="">
+							<div class="panel panel-default">
+								<!-- Default panel contents -->
+								<div class="panel-heading">
+									<i class="icon-pencil"></i>&nbsp;<span id="table-title">BP受注（2/2）</span>
+								</div>
+								<div class="panel-body">
+									<div class="col-sm-12 form-group">
+										<div class="col-sm-12">
+											<label class="rec-label">＜BP所属情報＞</label>
+										</div>
+									</div>
+									<div class="col-sm-12 form-group">
+										<div class="col-sm-12">
+											<label class="rec-label">発注番号</label>
+											<input type="text" class="rec-info-input"/>
+										</div>
+									</div>
+									<div class="col-sm-12 form-group">
+										<div class="col-sm-12">
+											<label class="rec-label">単価</label>
+											<input type="text" class="rec-info-input" />
+										</div>
+									</div>
+									<div class="col-sm-12 form-group">
+										<div class="col-sm-12">
+											<label class="rec-label">その他費用</label>
+											<input type="text" class="rec-info-input" />
+										</div>
+									</div>
+									<div class="col-sm-12 form-group">
+										<div class="col-sm-12">
+											<label class="rec-label">社員給与</label>
+											<input type="text" class="rec-info-input" />
+										</div>
+									</div>
+									<div class="col-sm-12 form-group">
+										<div class="col-sm-12">
+											<label class="rec-label">特別精算(H範囲)</label>
+											<input type="text" class="rec-range-input" />～
+											<input type="text" class="rec-range-input" style="margin-left:0px" />
+										</div>
+									</div>
+									<div class="col-sm-12 form-group">
+										<div class="col-sm-12">
+											<label class="rec-label">精算単位</label>
+											<input type="text" class="rec-info-input" />
+										</div>
+									</div>
+									<div class="col-sm-12 form-group">
+										<div class="col-sm-12">
+											<label class="rec-label">発注区分</label>
+											<select class="rec-info-select" name="divide">
+												<option value="0" selected="selected">区分1</option>
+												<option value="1">区分2</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-sm-12 form-group">
+										<div class="col-sm-12">
+											<label class="rec-label">PC賃与</label>
+											<select class="rec-info-select" name="divide">
+												<option value="0" selected="selected">是</option>
+												<option value="1">否</option>
+											</select>
+										</div>
+									</div>
+
+									<div id="receiveMemo" class="col-sm-12">
+										<div class="rec-employee-group">
+											<label class="rec-label">備考</label>
+										</div>
+										<div class="col-sm-10" style="margin-left: 10px;">
+											<textarea type="text" value="" class="rec-info-textarea"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="panel-default">
+									<div class="rec-form-group">
+										<div class="text-center" style="margin-bottom: 10px;">
+											<button type="submit" class="btn btn-primary">登録</button>
+											<a href="receive_order_bp_list.html" class="btn btn-default">取消</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--End Content-->
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

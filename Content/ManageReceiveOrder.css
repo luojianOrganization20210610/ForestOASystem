@@ -129,8 +129,8 @@ select {
 }
 
 .rec-info-textarea {
-	width: 793.8px;
-	height: 60px;
+	width: 300px;
+	height: 100px;
 	resize: none;
 }
 
@@ -171,4 +171,15 @@ select {
 
 .rec-select {
 	width: 90px;
+}
+
+.rec-range-input {
+	margin-left: 20px;
+	height: 26px;
+	width: 82px;
+}
+
+.rec-modal-label {
+	font-size: 14px;
+	width: 80px;
 }
