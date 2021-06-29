@@ -68,12 +68,12 @@ button.cannot-delete {
 	display: none;
 }
 
-.request-info-lable {
+.charge-info-lable {
 	margin-left: 20px;
 	width: 130px;
 }
 
-.request-select-control {
+.charge-select-control {
 	display: block;
 	width: 300px;
 	height: 26px;
@@ -84,12 +84,12 @@ button.cannot-delete {
 	border-radius: 3px;
 }
 
-.request-div {
+.charge-div {
 	display: block;
-	width: 100%;
+	margin-bottom: 10px;
 }
 
-.request-control {
+.charge-control {
 	width: 300px;
 	height: calc(2.25rem + 2px);
 	padding: .375rem .75rem;
@@ -103,7 +103,7 @@ button.cannot-delete {
 	transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-.request-control.request-control-border {
+.charge-control.charge-control-border {
 	border-top: 0;
 	border-left: 0;
 	border-right: 0;
@@ -111,39 +111,39 @@ button.cannot-delete {
 	box-shadow: inherit;
 }
 
-.request-form-group {
+.charge-form-group {
 	height: 40px;
 }
 
-.request-select-control {
-	display: block;
-	width: 300px;
-	height: 26px;
-	padding: .375rem .75rem;
-	margin-left: 20px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-}
-
-.request-info-select {
+.charge-info-select {
 	margin-left: 20px;
 	width: 182.6px;
 	height: 26px;
 }
 
-.request-info-input {
+.charge-info-input {
 	margin-left: 20px !important;
 	height: 26px;
 	width: 182px;
 }
 
-.request-info-checkbox {
+.charge-input{
+	width: 85px;
+	text-align: center;
+}
+
+.charge-time-input{
+	width: 60px;
+	text-align: center;
+}
+
+
+.charge-info-checkbox {
 	margin-left: 20px !important;
 }
 
 
-.request-info-date {
+.charge-info-date {
 	margin-left: 24px;
 	width: 182px;
 	height: 24px;
@@ -158,11 +158,12 @@ select {
 	padding: 0.5px 8px;
 }
 
-.request-label {
+.charge-label {
 	font-size: 14px;
+	width: 140px;
 }
 
-.request-employee-form {
+.charge-employee-form {
 	border: 1px solid #D6D6D6;
 	padding: 10px;
 	width: 60%;
@@ -170,7 +171,7 @@ select {
 	height: 200px;
 }
 
-.request-scrollbar {
+.charge-scrollbar {
 	overflow: auto;
 	height: 140px
 }
@@ -179,7 +180,7 @@ select {
 	padding: 0 !important;
 }
 
-.request-table {
+.charge-table {
 	width: 1208px;
 	border-collapse: collapse;
 	display: table;
@@ -192,6 +193,7 @@ select {
 	display: block;
 	width: 100%;
 	overflow-x: scroll;
+	overflow-y: hidden;
 	-webkit-overflow-scrolling: touch;
 }
 
@@ -210,7 +212,6 @@ table th {
 	padding: .75rem;
 	vertical-align: top;
 	border-top: 1px solid #dee2e6;
-	border-bottom: 1px solid #dee2e6;
 	text-align: left;
 	font-size: 1.25rem;
 	font-weight: 400;

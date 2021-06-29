@@ -8,7 +8,7 @@
 		<link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 		<link href="/ForestOASystem/Content/font-awesome.css" rel="stylesheet">
 		<link href="/ForestOASystem/Content/style_v1.css" rel="stylesheet">
-		<link href="/ForestOASystem/Content/ManageRequestOrder.css" rel="stylesheet">
+		<link href="/ForestOASystem/Content/ManageChargeOrder.css" rel="stylesheet">
 
 		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -95,18 +95,22 @@
 								<span class="hidden-xs">受注</span>
 							</a>
 						</li>
-
 						<li>
-							<a href="send_order_list.html" class="ajax-link">
-								<i class="icon-list-alt"></i>
-								<span class="hidden-xs">発注</span>
+							<a href="receive_order_bp_list.html" class="ajax-link">
+								<i class="icon-pencil"></i>
+								<span class="hidden-xs">BP受注</span>
 							</a>
 						</li>
-
 						<li>
-							<a href="operation_list.html" class="ajax-link">
+							<a href="charge_list.html" class="ajax-link">
 								<i class="icon-th-list"></i>
-								<span class="hidden-xs">稼働明細一覧</span>
+								<span class="hidden-xs">請求</span>
+							</a>
+						</li>
+						<li>
+							<a href="charge_bp_list.html" class="ajax-link">
+								<i class="icon-th-list"></i>
+								<span class="hidden-xs">BP請求</span>
 							</a>
 						</li>
 					</ul>
@@ -120,37 +124,48 @@
 								<!-- Default panel contents -->
 								<div class="panel-heading">
 									<i class="icon-th-list"></i>&nbsp;&nbsp;<span id="table-title">請求明細一覧</span>
-									<div class="titlemenu-area">
-										<a href="receive_order_regist.html"><i class="icon-plus"></i>&nbsp;<span class="head-menu">Add</span></a>
-									</div>
 								</div>
 								<div class="panel-body">
-									<div class="request-form-group">
-										<div class="col-sm-4">
-											<div class="" style="float:left">
-												<label class="request-label">稼働年月</label>
+									<div class="col-xs-12 charge-div">
+											<div style="float:left">
+												<label class="charge-label">年月</label>
 											</div>
-											<div class='input-group date request-info-date' id='datetimepicker1'>
+											<div class='input-group date charge-info-date' id='datetimepicker1'>
 												<input type='text' class="timeInput form-control" />
 												<span class="input-group-addon">
 													<span class="glyphicon glyphicon-calendar"></span>
 												</span>
 											</div>
-										</div>
-										<div class="col-sm-4">
-											<label class="request-label">取引先</label>
-											<input type="text" class="request-info-input" />
-										</div>
-										<div class="col-sm-4">
-											<label class="request-label">所属</label>
-											<input type="text" class="request-info-input" />
-											<button type="submit" class="btn btn-primary"  style="text-align: right;margin-left: 30px;">検索</button>
+									</div>
+									<div class="col-sm-12 charge-div">
+											<label class="charge-label">派遣先取引先</label>
+											<select class="charge-info-select">
+												<option value="0" selected="selected">取引先1</option>
+												<option value="1">取引先2</option>
+												<option value="2">取引先3</option>
+											</select>
+									</div>
+									<div class="col-sm-12 charge-div">
+											<label class="charge-label">所属</label>
+											<select class="charge-info-select">
+												<option value="0" selected="selected">所属1</option>
+												<option value="1">所属2</option>
+												<option value="2">所属3</option>
+											</select>
+									</div>
+									<div class="col-sm-12 charge-div">
+											<label class="charge-label">ソート順</label>
+											<input class="charge-info-input" disabled="disabled" value=" 年月 > No. > 氏名" style="background-color:#dddd" />
+									</div>
+									<div class="col-sm-12">
+										<div class="text-left">
+											<button type="submit" class="btn btn-primary">検索</button>
 										</div>
 									</div>
 								</div>
 								<div class="panel-body-list">
 									<!-- Table -->
-									<div class="form-group table-responsive" style="height: 400px;">
+									<div class="form-group table-responsive" style="height: 300px;">
 										<table class="table text-nowrap" id="tableMemo">
 											<thead>
 												<tr>
@@ -186,21 +201,21 @@
 													<td>5</td>
 													<td></td>
 													<td>取引先1</td>
-													<td>中央区日本橋本町4丁目5－13日本橋本町THビル</td>
+													<td>中央区日本橋本町THビル</td>
 													<td>20,000,000</td>
 													<td>2,000</td>
 													<td>2,200</td>
 													<td>2103-1001-1</td>
-													<td>精算1</td>
+													<td>140～180h</td>
 													<td>区分1</td>
-													<td>20210330</td>
+													<td><input class="charge-input" type="text" value="2021/03/30" /></td>
 													<td>0.5</td>
-													<td>150.75</td>
-													<td>150.5</td>
-													<td></td>
-													<td></td>
+													<td><input class="charge-time-input" type="text" value="150.75" /></td>
+													<td><input class="charge-time-input" type="text" value="150.5" /></td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td><input class="charge-input" type="text" value="" /> </td>
 													<td>その他</td>
-													<td></td>
+													<td>50,000,000</td>
 													<td>XXXXXXXXXXX</td>
 												</tr>
 												<tr>
@@ -215,16 +230,16 @@
 													<td>2,000</td>
 													<td>2,200</td>
 													<td>2103-2001-2</td>
-													<td>精算1</td>
+													<td>140～180h</td>
 													<td>区分1</td>
-													<td>20210330</td>
+													<td><input class="charge-input" type="text" value="2021/03/30" /></td>
 													<td>0.5</td>
-													<td>160</td>
-													<td>160</td>
-													<td></td>
-													<td></td>
+													<td><input class="charge-time-input" type="text" value="160" /></td>
+													<td><input class="charge-time-input" type="text" value="160" /></td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td><input class="charge-input" type="text" value="" /> </td>
 													<td>その他</td>
-													<td></td>
+													<td>50,000,000</td>
 													<td>XXXXXXXXXXX</td>
 												</tr>
 												<tr>
@@ -239,16 +254,16 @@
 													<td>2,000</td>
 													<td>2,200</td>
 													<td>2103-1001-3</td>
-													<td>精算1</td>
+													<td>140～180h</td>
 													<td>区分1</td>
-													<td>20210330</td>
+													<td><input class="charge-input" type="text" value="2021/03/30" /></td>
 													<td>0.25</td>
-													<td>140.75</td>
-													<td>140.75</td>
-													<td></td>
-													<td></td>
+													<td><input class="charge-time-input" type="text" value="140.75" /></td>
+													<td><input class="charge-time-input" type="text" value="140.75" /></td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td><input class="charge-input" type="text" value="" /> </td>
 													<td>その他</td>
-													<td></td>
+													<td>50,000,000</td>
 													<td>XXXXXXXXXXX</td>
 												</tr>
 												<tr>
@@ -263,16 +278,16 @@
 													<td>2,000</td>
 													<td>2,200</td>
 													<td>2104-3001-4</td>
-													<td>精算1</td>
+													<td>140～180h</td>
 													<td>区分1</td>
-													<td>20210430</td>
+													<td><input class="charge-input" type="text" value="2021/04/30" /></td>
 													<td>0.25</td>
-													<td>155.5</td>
-													<td>155.5</td>
-													<td></td>
-													<td></td>
+													<td><input class="charge-time-input" type="text" value="155.55" /></td>
+													<td><input class="charge-time-input" type="text" value="155.5" /></td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td><input class="charge-input" type="text" value="" /> </td>
 													<td>その他</td>
-													<td></td>
+													<td>50,000,000</td>
 													<td>XXXXXXXXXXX</td>
 												</tr>
 												<tr>
@@ -287,16 +302,16 @@
 													<td>2,000</td>
 													<td>2,200</td>
 													<td>2105-1001-5</td>
-													<td>精算1</td>
+													<td>140～180h</td>
 													<td>区分1</td>
-													<td>20210430</td>
+													<td><input class="charge-input" type="text" value="2021/05/30" /></td>
 													<td>0.15</td>
-													<td>146.70</td>
-													<td>146.60</td>
-													<td></td>
-													<td></td>
+													<td><input class="charge-time-input" type="text" value="146.7" /></td>
+													<td><input class="charge-time-input" type="text" value="146.6" /></td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td><input class="charge-input" type="text" value="" /> </td>
 													<td>その他</td>
-													<td></td>
+													<td>50,000,000</td>
 													<td>XXXXXXXXXXX</td>
 												</tr>
 											</tbody>

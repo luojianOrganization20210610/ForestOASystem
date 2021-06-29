@@ -119,14 +119,11 @@
 				<div id="content" class="col-xs-12 col-sm-10">
 					<div id="ajax-content">
 
-						<div id="datalist-home" data-role="page">
+						<div id="datalist-home" data-role="page" class="">
 							<div class="panel panel-default">
 								<!-- Default panel contents -->
 								<div class="panel-heading">
-									<i class="icon-pencil"></i>&nbsp;&nbsp;<span id="table-title">受注明細一覧</span>
-									<div class="titlemenu-area">
-										<a href="receive_order_regist_step.html"><i class="icon-plus"></i>&nbsp;<span class="head-menu">Add</span></a>
-									</div>
+									<i class="icon-th-list"></i>&nbsp;&nbsp;<span id="table-title">BP請求明細一覧</span>
 								</div>
 								<div class="panel-body">
 									<div class="col-xs-12 charge-div">
@@ -167,19 +164,11 @@
 									</div>
 								</div>
 								<div class="panel-body-list">
-									<div class="col-sm-12 text-center">
-											<div class="btn-group">
-												<button type="button" class="btn btn-default">継続契約登録</button>
-												<button type="button" class="btn btn-default">コピー登録</button>
-											</div>
-										</div>
-									</div>
 									<!-- Table -->
-									<div class="form-group table-responsive" style="height: 280px;">
+									<div class="form-group table-responsive" style="height: 300px;">
 										<table class="table text-nowrap" id="tableMemo">
 											<thead>
 												<tr>
-													<th style="width:50px">選択</th>
 													<th>年月</th>
 													<th>No.</th>
 													<th>氏名</th>
@@ -194,13 +183,37 @@
 													<th>精算</th>
 													<th>受注区分</th>
 													<th>注文請書<br />発送日</th>
-													<th>メモ</th>
-													<th>詳細</th>
+													<th>精算単位<br />（H）</th>
+													<th>勤務時間<br />（H）</th>
+													<th>承認時間<br />（H）</th>
+													<th>控除額<br />（円）</th>
+													<th>超過額<br />（円）</th>
+													<th>その他</th>
+													<th>請求小計</th>
+													<th>メモ1</th>
+													<th>所属会社</th>
+													<th>単価</th>
+													<th>その他<br />費用</th>
+													<th>発注番号</th>
+													<th>社員給与</th>
+													<th>特別精算</th>
+													<th>発注区分</th>
+													<th>発注状況</th>
+													<th>注文書<br />発送日</th>
+													<th>所属区分</th>
+													<th>PC貸与</th>
+													<th>精算単位<br />（H）</th>
+													<th>勤務時間<br />（H）</th>
+													<th>承認時間<br />（H）</th>
+													<th>控除額<br />（円）</th>
+													<th>超過額<br />（円）</th>
+													<th>その他</th>
+													<th>発送小計</th>
+													<th>メモ2</th>
 												</tr>
-											</thead>
+											</thead>											
 											<tbody>
 												<tr>
-													<td><input type="checkbox"></td>
 													<td>2103</td>
 													<td>1</td>
 													<td>AAA</td>
@@ -208,18 +221,48 @@
 													<td></td>
 													<td>取引先1</td>
 													<td>中央区日本橋本町THビル</td>
-													<td>20,000,000</td>
+													<td>50,000,000</td>
 													<td>2,000</td>
 													<td>2,200</td>
 													<td>2103-1001-1</td>
 													<td>140～180h</td>
 													<td>区分1</td>
 													<td><input class="charge-input" type="text" value="2021/03/30" /></td>
+													<td>0.25</td>
+													<td><input class="charge-time-input" type="text" value="155.55" /></td>
+													<td><input class="charge-time-input" type="text" value="155.5" /></td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td>その他</td>
+													<td>50,000,000</td>
 													<td>XXXXXXXXXXX</td>
-													<td><a href="receive_order_regist_step.html">詳細</td>
+													<td>日立会社</td>
+													<td>50,000,000</td>
+													<td>3,000</td>
+													<td>2103-1001-1</td>
+													<td>50,000,000</td>
+													<td>特別精算1</td>
+													<td>発注区分1</td>
+													<td>
+														<select>
+															<option value="0" selected="selected">状況1</option>
+															<option value="1">状況2</option>
+															<option value="2">状況3</option>
+														</select>
+													</td>
+													<td><input class="charge-input" type="text" value="2021/03/30" /></td>
+													<td>所属区分1</td>
+													<td>是</td>
+													<td>0.5</td>
+													<td><input class="charge-time-input" type="text" value="160" /></td>
+													<td><input class="charge-time-input" type="text" value="160" /></td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td>その他</td>
+													<td>50,000,000</td>
+													<td>XXXXXXXXX</td>
 												</tr>
 												<tr>
-													<td><input type="checkbox"></td>
 													<td>2103</td>
 													<td>2</td>
 													<td>BBB</td>
@@ -227,18 +270,48 @@
 													<td>4</td>
 													<td>取引先2</td>
 													<td>日本橋茅場町YKビル</td>
-													<td>30,000,000</td>
+													<td>40,000,000</td>
 													<td>2,000</td>
 													<td>2,200</td>
-													<td>2103-2001-2</td>
+													<td>2103-2001-1</td>
 													<td>140～180h</td>
 													<td>区分1</td>
 													<td><input class="charge-input" type="text" value="2021/03/30" /></td>
+													<td>0.25</td>
+													<td><input class="charge-time-input" type="text" value="150.75" /></td>
+													<td><input class="charge-time-input" type="text" value="150.75" /></td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td>その他</td>
+													<td>40,000,000</td>
 													<td>XXXXXXXXXXX</td>
-													<td><a href="receive_order_regist_step.html">詳細</td>
+													<td>三井住友会社</td>
+													<td>40,000,000</td>
+													<td>2,000</td>
+													<td>2103-2001-2</td>
+													<td>40,000,000</td>
+													<td>特別精算1</td>
+													<td>発注区分1</td>
+													<td>
+														<select>
+															<option value="0" selected="selected">状況1</option>
+															<option value="1">状況2</option>
+															<option value="2">状況3</option>
+														</select>
+													</td>
+													<td><input class="charge-input" type="text" value="2021/03/30" /></td>
+													<td>所属区分1</td>
+													<td>否</td>
+													<td>0.25</td>
+													<td><input class="charge-time-input" type="text" value="150.75" /></td>
+													<td><input class="charge-time-input" type="text" value="150.75" /></td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td>その他</td>
+													<td>40,000,000</td>
+													<td>XXXXXXXXX</td>
 												</tr>
 												<tr>
-													<td><input type="checkbox"></td>
 													<td>2103</td>
 													<td>3</td>
 													<td>CCC</td>
@@ -246,18 +319,48 @@
 													<td>1</td>
 													<td>取引先1</td>
 													<td>日本橋茅場町大江戸ビル</td>
-													<td>40,000,000</td>
+													<td>50,000,000</td>
 													<td>2,000</td>
 													<td>2,200</td>
-													<td>2103-1001-3</td>
+													<td>2103-1001-2</td>
 													<td>140～180h</td>
 													<td>区分1</td>
 													<td><input class="charge-input" type="text" value="2021/03/30" /></td>
+													<td>0.25</td>
+													<td><input class="charge-time-input" type="text" value="180" /></td>
+													<td><input class="charge-time-input" type="text" value="180" /></td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td>その他</td>
+													<td>50,000,000</td>
 													<td>XXXXXXXXXXX</td>
-													<td><a href="receive_order_regist_step.html">詳細</td>
+													<td>三井住友会社</td>
+													<td>50,000,000</td>
+													<td>2,000</td>
+													<td>2103-2001-2</td>
+													<td>50,000,000</td>
+													<td>特別精算1</td>
+													<td>発注区分1</td>
+													<td>
+														<select>
+															<option value="0" selected="selected">状況1</option>
+															<option value="1">状況2</option>
+															<option value="2">状況3</option>
+														</select>
+													</td>
+													<td><input class="charge-input" type="text" value="2021/03/30" /></td>
+													<td>所属区分1</td>
+													<td>是</td>
+													<td>0.25</td>
+													<td><input class="charge-time-input" type="text" value="180" /></td>
+													<td><input class="charge-time-input" type="text" value="180" /></td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td>その他</td>
+													<td>50,000,000</td>
+													<td>XXXXXXXXX</td>
 												</tr>
 												<tr>
-													<td><input type="checkbox"></td>
 													<td>2104</td>
 													<td>4</td>
 													<td>張一郎</td>
@@ -272,11 +375,41 @@
 													<td>140～180h</td>
 													<td>区分1</td>
 													<td><input class="charge-input" type="text" value="2021/04/30" /></td>
+													<td>0.5</td>
+													<td><input class="charge-time-input" type="text" value="140" /></td>
+													<td><input class="charge-time-input" type="text" value="140" /></td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td>その他</td>
+													<td>50,000,000</td>
 													<td>XXXXXXXXXXX</td>
-													<td><a href="receive_order_regist_step.html">詳細</td>
+													<td>三井住友会社</td>
+													<td>40,000,000</td>
+													<td>2,000</td>
+													<td>2103-2001-2</td>
+													<td>40,000,000</td>
+													<td>特別精算1</td>
+													<td>発注区分1</td>
+													<td>
+														<select>
+															<option value="0" selected="selected">状況1</option>
+															<option value="1">状況2</option>
+															<option value="2">状況3</option>
+														</select>
+													</td>
+													<td><input class="charge-input" type="text" value="2021/03/30" /></td>
+													<td>所属区分1</td>
+													<td>是</td>
+													<td>0.5</td>
+													<td><input class="charge-time-input" type="text" value="140" /></td>
+													<td><input class="charge-time-input" type="text" value="140" /></td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td>その他</td>
+													<td>40,000,000</td>
+													<td>XXXXXXXXX</td>
 												</tr>
 												<tr>
-													<td><input type="checkbox"></td>
 													<td>2105</td>
 													<td>5</td>
 													<td>張二郎</td>
@@ -291,8 +424,39 @@
 													<td>140～180h</td>
 													<td>区分1</td>
 													<td><input class="charge-input" type="text" value="2021/05/30" /></td>
+													<td>0.15</td>
+													<td><input class="charge-time-input" type="text" value="161.5" /></td>
+													<td><input class="charge-time-input" type="text" value="161.45" /></td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td>その他</td>
+													<td>30,000,000</td>
 													<td>XXXXXXXXXXX</td>
-													<td><a href="receive_order_regist_step.html">詳細</td>
+													<td>三井住友会社</td>
+													<td>30,000,000</td>
+													<td>2,000</td>
+													<td>2105-1001-5</td>
+													<td>30,000,000</td>
+													<td>特別精算1</td>
+													<td>発注区分1</td>
+													<td>
+														<select>
+															<option value="0" selected="selected">状況1</option>
+															<option value="1">状況2</option>
+															<option value="2">状況3</option>
+														</select>
+													</td>
+													<td><input class="charge-input" type="text" value="2021/05/30" /></td>
+													<td>所属区分1</td>
+													<td>否</td>
+													<td>0.15</td>
+													<td><input class="charge-time-input" type="text" value="161.5" /></td>
+													<td><input class="charge-time-input" type="text" value="161.45" /></td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td><input class="charge-input" type="text" value="" /> </td>
+													<td>その他</td>
+													<td>30,000,000</td>
+													<td>XXXXXXXXX</td>
 												</tr>
 											</tbody>
 										</table>

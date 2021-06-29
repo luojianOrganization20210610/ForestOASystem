@@ -25,7 +25,7 @@
 					locale: moment.locale('en'),
 					//minDate: '2016-7-1'
 				});
-				
+
 			});
 			$('#datetimepicker1').datetimepicker({
 				format: 'YYYY-MM-DD',
@@ -110,87 +110,88 @@
 								<div class="panel-heading">
 									<i class="icon-pencil"></i> <span id="table-title">BP受注明細一覧</span>
 									<div class="titlemenu-area">
-										<a href="receive_order_bp_regist_step1.html"><i class="icon-plus"></i>&nbsp;<span class="head-menu">Add</span></a>
+										<a href="receive_order_bp_regist_step1.html"><i
+												class="icon-plus"></i>&nbsp;<span class="head-menu">Add</span></a>
 									</div>
 								</div>
 								<div class="panel-body">
 									<div class="rec-form-group">
-											<div class="" style="float:left">
-												<label class="rec-label">年月</label>
-											</div>
-											<div class='input-group date rec-info-date' id='datetimepicker1'>
-												<input type='text' class="timeInput form-control" />
-												<span class="input-group-addon">
-													<span class="glyphicon glyphicon-calendar"></span>
-												</span>
-											</div>
-									</div>
-									<div class="rec-form-group">
-											<label class="rec-label">派遣先取引先</label>
-											<select class="rec-info-select">
-												<option value="0" selected="selected">取引先1</option>
-												<option value="1">取引先2</option>
-												<option value="2">取引先3</option>
-											</select>
-									</div>
-									<div class="rec-form-group">
-											<label class="rec-label">所属</label>
-											<select class="rec-info-select">
-												<option value="0" selected="selected">所属1</option>
-												<option value="1">所属2</option>
-												<option value="2">所属3</option>
-											</select>
-									</div>
-									<div class="rec-form-group">
-											<label class="rec-label">ソート順</label>
-											<input class="rec-info-input" disabled="disabled" value=" 年月 > No. > 氏名" style="background-color:#dddd" />
-									</div>
-										<div class="text-left">
-											<button type="submit" class="btn btn-primary">検索</button>
+										<div class="" style="float:left">
+											<label class="rec-label">年月</label>
 										</div>
+										<div class='input-group date rec-info-date' id='datetimepicker1'>
+											<input type='text' class="timeInput form-control" />
+											<span class="input-group-addon">
+												<span class="glyphicon glyphicon-calendar"></span>
+											</span>
+										</div>
+									</div>
+									<div class="rec-form-group">
+										<label class="rec-label">派遣先取引先</label>
+										<select class="rec-info-select">
+											<option value="0" selected="selected">取引先1</option>
+											<option value="1">取引先2</option>
+											<option value="2">取引先3</option>
+										</select>
+									</div>
+									<div class="rec-form-group">
+										<label class="rec-label">所属</label>
+										<select class="rec-info-select">
+											<option value="0" selected="selected">所属1</option>
+											<option value="1">所属2</option>
+											<option value="2">所属3</option>
+										</select>
+									</div>
+									<div class="rec-form-group">
+										<label class="rec-label">ソート順</label>
+										<input class="rec-info-input" disabled="disabled" value=" 年月 > No. > 氏名"
+											style="background-color:#dddd" />
+									</div>
+									<div class="text-left">
+										<button type="submit" class="btn btn-primary">検索</button>
+									</div>
 								</div>
 								<div class="panel-body-list">
 									<div class="col-sm-12 text-center">
-											<div class="btn-group">
-												<button type="button" class="btn btn-default">継続契約登録</button>
-												<button type="button" class="btn btn-default">コピー登録</button>
-											</div>
+										<div class="btn-group">
+											<button type="button" class="btn btn-default">継続契約登録</button>
+											<button type="button" class="btn btn-default">コピー登録</button>
 										</div>
 									</div>
 									<!-- Table -->
 									<div class="table-responsive">
 										<table id="datalist" class="table text-nowrap">
 											<thead>
-											<th style="width:50px">選択</th>
-											<th>年月</th>
-											<th>No.</th>
-											<th>氏名</th>
-											<th>新規</th>
-											<th>継続</th>
-											<th>取引先</th>
-											<th>現場</th>
-											<th>契約単価<br />（税抜）</th>
-											<th>その他<br />（税抜）</th>
-											<th>その他<br />（税込）</th>
-											<th>受注番号</th>
-											<th>精算</th>
-											<th>精算単位</th>
-											<th>受注区分</th>
-											<th>注文請書<br />発送日</th>
-											<th>メモ1</th>
-											<th>所属会社</th>
-											<th>単価</th>
-											<th>その他<br />費用</th>
-											<th>発注番号</th>
-											<th>社員給与</th>
-											<th>特別精算</th>
-											<th>発注区分</th>
-											<th>発注状況</th>
-											<th>注文書<br />発送日</th>
-											<th>所属区分</th>
-											<th>PC貸与</th>
-											<th>メモ2</th>
-											<th>詳細</th>
+												<th style="width:50px">選択</th>
+												<th>年月</th>
+												<th>No.</th>
+												<th>氏名</th>
+												<th>新規</th>
+												<th>継続</th>
+												<th>取引先</th>
+												<th>現場</th>
+												<th>契約単価<br />（税抜）</th>
+												<th>その他<br />（税抜）</th>
+												<th>その他<br />（税込）</th>
+												<th>受注番号</th>
+												<th>精算</th>
+												<th>精算単位</th>
+												<th>受注区分</th>
+												<th>注文請書<br />発送日</th>
+												<th>メモ1</th>
+												<th>所属会社</th>
+												<th>単価</th>
+												<th>その他<br />費用</th>
+												<th>発注番号</th>
+												<th>社員給与</th>
+												<th>特別精算</th>
+												<th>発注区分</th>
+												<th>発注状況</th>
+												<th>注文書<br />発送日</th>
+												<th>所属区分</th>
+												<th>PC貸与</th>
+												<th>メモ2</th>
+												<th>詳細</th>
 											</thead>
 											<tbody>
 												<tr>
