@@ -5,10 +5,11 @@
 		<link href="/ForestOASystem/Content/Site.css" rel="stylesheet">
 		<link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 		<link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
-		<link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+		<link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"
+			rel="stylesheet">
 		<link href="/ForestOASystem/Content/font-awesome.css" rel="stylesheet">
 		<link href="/ForestOASystem/Content/style_v1.css" rel="stylesheet">
-		<link href="/ForestOASystem/Content/ManageChargeOrder.css" rel="stylesheet">
+		<link href="/ForestOASystem/Content/ManageReceiveOrder.css" rel="stylesheet">
 
 		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -24,28 +25,12 @@
 					locale: moment.locale('en'),
 					//minDate: '2016-7-1'
 				});
-				var picker2 = $('#datetimepicker2').datetimepicker({
-					format: 'YYYY-MM-DD',
-					locale: moment.locale('en')
-				});
-				//动态设置最小值
-				picker1.on('dp.change', function(e) {
-					picker2.data('DateTimePicker').minDate(e.date);
-				});
-				//动态设置最大值
-				picker2.on('dp.change', function(e) {
-					picker1.data('DateTimePicker').maxDate(e.date);
-				});
+
 			});
 			$('#datetimepicker1').datetimepicker({
 				format: 'YYYY-MM-DD',
 				locale: moment.locale('zh-cn'),
 				defaultDate: "2018-1-1"
-			});
-			$('#datetimepicker2').datetimepicker({
-				format: 'YYYY-MM-DD',
-				locale: moment.locale('zh-cn'),
-				defaultDate: "2028-1-1"
 			});
 		</script>
 
@@ -119,182 +104,185 @@
 				<div id="content" class="col-xs-12 col-sm-10">
 					<div id="ajax-content">
 
-						<div id="datalist-home" data-role="page">
+						<div id="datalist-home" data-role="page" class="">
 							<div class="panel panel-default">
 								<!-- Default panel contents -->
 								<div class="panel-heading">
-									<i class="icon-pencil"></i>&nbsp;&nbsp;<span id="table-title">受注明細一覧</span>
+									<i class="icon-pencil"></i> <span id="table-title">BP受注明細一覧</span>
 									<div class="titlemenu-area">
-										<a href="receive_order_regist_step.html"><i class="icon-plus"></i>&nbsp;<span class="head-menu">Add</span></a>
+										<a href="receive_order_regist_step.html"><i
+												class="icon-plus"></i>&nbsp;<span class="head-menu">Add</span></a>
 									</div>
 								</div>
 								<div class="panel-body">
-									<div class="col-xs-12 charge-div">
-											<div style="float:left">
-												<label class="charge-label">年月</label>
-											</div>
-											<div class='input-group date charge-info-date' id='datetimepicker1'>
-												<input type='text' class="timeInput form-control" />
-												<span class="input-group-addon">
-													<span class="glyphicon glyphicon-calendar"></span>
-												</span>
-											</div>
-									</div>
-									<div class="col-sm-12 charge-div">
-											<label class="charge-label">派遣先取引先</label>
-											<select class="charge-info-select">
-												<option value="0" selected="selected">取引先1</option>
-												<option value="1">取引先2</option>
-												<option value="2">取引先3</option>
-											</select>
-									</div>
-									<div class="col-sm-12 charge-div">
-											<label class="charge-label">所属</label>
-											<select class="charge-info-select">
-												<option value="0" selected="selected">所属1</option>
-												<option value="1">所属2</option>
-												<option value="2">所属3</option>
-											</select>
-									</div>
-									<div class="col-sm-12 charge-div">
-											<label class="charge-label">ソート順</label>
-											<input class="charge-info-input" disabled="disabled" value=" 年月 > No. > 氏名" style="background-color:#dddd" />
-									</div>
-									<div class="col-sm-12">
-										<div class="text-left">
-											<button type="submit" class="btn btn-primary">検索</button>
+									<div class="rec-form-group">
+										<div class="" style="float:left">
+											<label class="rec-label">年月</label>
 										</div>
+										<div class='input-group date rec-info-date' id='datetimepicker1'>
+											<input type='text' class="timeInput form-control" />
+											<span class="input-group-addon">
+												<span class="glyphicon glyphicon-calendar"></span>
+											</span>
+										</div>
+									</div>
+									<div class="rec-form-group">
+										<label class="rec-label">派遣先取引先</label>
+										<select class="rec-info-select">
+											<option value="0" selected="selected">取引先1</option>
+											<option value="1">取引先2</option>
+											<option value="2">取引先3</option>
+										</select>
+									</div>
+									<div class="rec-form-group">
+										<label class="rec-label">所属</label>
+										<select class="rec-info-select">
+											<option value="0" selected="selected">所属1</option>
+											<option value="1">所属2</option>
+											<option value="2">所属3</option>
+										</select>
+									</div>
+									<div class="rec-form-group">
+										<label class="rec-label">ソート順</label>
+										<input class="rec-info-input" disabled="disabled" value=" 年月 > No. > 氏名"
+											style="background-color:#dddd" />
+									</div>
+									<div class="text-left">
+										<button type="submit" class="btn btn-primary">検索</button>
 									</div>
 								</div>
 								<div class="panel-body-list">
 									<div class="col-sm-12 text-center">
-											<div class="btn-group">
-												<button type="button" class="btn btn-default">継続契約登録</button>
-												<button type="button" class="btn btn-default">コピー登録</button>
-											</div>
+										<div class="btn-group">
+											<button type="button" class="btn btn-default">継続契約登録</button>
+											<button type="button" class="btn btn-default">コピー登録</button>
 										</div>
 									</div>
 									<!-- Table -->
-									<div class="form-group table-responsive" style="height: 280px;">
-										<table class="table text-nowrap" id="tableMemo">
+									<div class="table-responsive">
+										<table id="datalist" class="table text-nowrap">
 											<thead>
-												<tr>
-													<th style="width:50px">選択</th>
-													<th>年月</th>
-													<th>No.</th>
-													<th>氏名</th>
-													<th>新規</th>
-													<th>継続</th>
-													<th>取引先</th>
-													<th>現場</th>
-													<th>契約単価<br />（税抜）</th>
-													<th>その他<br />（税抜）</th>
-													<th>その他<br />（税込）</th>
-													<th>受注番号</th>
-													<th>精算</th>
-													<th>受注区分</th>
-													<th>注文請書<br />発送日</th>
-													<th>メモ</th>
-													<th>詳細</th>
-												</tr>
+												<th style="width:50px">選択</th>
+												<th>年月</th>
+												<th>No.</th>
+												<th>氏名</th>
+												<th>新規</th>
+												<th>継続</th>
+												<th>取引先</th>
+												<th>現場</th>
+												<th>契約単価<br />（税抜）</th>
+												<th>その他<br />（税抜）</th>
+												<th>その他<br />（税込）</th>
+												<th>受注番号</th>
+												<th>精算</th>
+												<th>精算単位</th>
+												<th>受注区分</th>
+												<th>注文請書<br />発送日</th>
+												<th>メモ1</th>
+												<th>詳細</th>
 											</thead>
-											<tbody>
-												<tr>
-													<td><input type="checkbox"></td>
-													<td>2103</td>
-													<td>1</td>
-													<td>AAA</td>
-													<td>5</td>
-													<td></td>
-													<td>取引先1</td>
-													<td>中央区日本橋本町THビル</td>
-													<td>20,000,000</td>
-													<td>2,000</td>
-													<td>2,200</td>
-													<td>2103-1001-1</td>
-													<td>140～180h</td>
-													<td>区分1</td>
-													<td><input class="charge-input" type="text" value="2021/03/30" /></td>
-													<td>XXXXXXXXXXX</td>
-													<td><a href="receive_order_regist_step.html">詳細</td>
-												</tr>
-												<tr>
-													<td><input type="checkbox"></td>
-													<td>2103</td>
-													<td>2</td>
-													<td>BBB</td>
-													<td></td>
-													<td>4</td>
-													<td>取引先2</td>
-													<td>日本橋茅場町YKビル</td>
-													<td>30,000,000</td>
-													<td>2,000</td>
-													<td>2,200</td>
-													<td>2103-2001-2</td>
-													<td>140～180h</td>
-													<td>区分1</td>
-													<td><input class="charge-input" type="text" value="2021/03/30" /></td>
-													<td>XXXXXXXXXXX</td>
-													<td><a href="receive_order_regist_step.html">詳細</td>
-												</tr>
-												<tr>
-													<td><input type="checkbox"></td>
-													<td>2103</td>
-													<td>3</td>
-													<td>CCC</td>
-													<td></td>
-													<td>1</td>
-													<td>取引先1</td>
-													<td>日本橋茅場町大江戸ビル</td>
-													<td>40,000,000</td>
-													<td>2,000</td>
-													<td>2,200</td>
-													<td>2103-1001-3</td>
-													<td>140～180h</td>
-													<td>区分1</td>
-													<td><input class="charge-input" type="text" value="2021/03/30" /></td>
-													<td>XXXXXXXXXXX</td>
-													<td><a href="receive_order_regist_step.html">詳細</td>
-												</tr>
-												<tr>
-													<td><input type="checkbox"></td>
-													<td>2104</td>
-													<td>4</td>
-													<td>張一郎</td>
-													<td>3</td>
-													<td></td>
-													<td>取引先3</td>
-													<td>中央区日本橋三井住友ビル</td>
-													<td>50,000,000</td>
-													<td>2,000</td>
-													<td>2,200</td>
-													<td>2104-3001-4</td>
-													<td>140～180h</td>
-													<td>区分1</td>
-													<td><input class="charge-input" type="text" value="2021/04/30" /></td>
-													<td>XXXXXXXXXXX</td>
-													<td><a href="receive_order_regist_step.html">詳細</td>
-												</tr>
-												<tr>
-													<td><input type="checkbox"></td>
-													<td>2105</td>
-													<td>5</td>
-													<td>張二郎</td>
-													<td>1</td>
-													<td></td>
-													<td>取引先1</td>
-													<td>中央区日本橋三菱ビル</td>
-													<td>30,000,000</td>
-													<td>2,000</td>
-													<td>2,200</td>
-													<td>2105-1001-5</td>
-													<td>140～180h</td>
-													<td>区分1</td>
-													<td><input class="charge-input" type="text" value="2021/05/30" /></td>
-													<td>XXXXXXXXXXX</td>
-													<td><a href="receive_order_regist_step.html">詳細</td>
-												</tr>
-											</tbody>
+												<tbody>
+													<tr>
+														<td><input type="checkbox"></td>
+														<td>2103</td>
+														<td>1</td>
+														<td>AAA</td>
+														<td>5</td>
+														<td></td>
+														<td>取引先1</td>
+														<td>中央区</td>
+														<td>50,000,000</td>
+														<td>2,000</td>
+														<td>2,200</td>
+														<td>2103-1001-1</td>
+														<td>140h～180h</td>
+														<td>0.25h</td>
+														<td>区分1</td>
+														<td><input class="rec-input" value="2021/06/01" /></td>
+														<td>XXXXXXXXXXX</td>
+														<td><a href="receive_order_regist_step.html">詳細</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox"></td>
+														<td>2103</td>
+														<td>1</td>
+														<td>AAA</td>
+														<td>5</td>
+														<td></td>
+														<td>取引先1</td>
+														<td>中央区</td>
+														<td>50,000,000</td>
+														<td>2,000</td>
+														<td>2,200</td>
+														<td>2103-1001-1</td>
+														<td>140h～180h</td>
+														<td>0.25h</td>
+														<td>区分1</td>
+														<td><input class="rec-input" value="2021/06/01" /></td>
+														<td>XXXXXXXXXXX</td>
+														<td><a href="receive_order_regist_step.html">詳細</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox"></td>
+														<td>2103</td>
+														<td>1</td>
+														<td>AAA</td>
+														<td>5</td>
+														<td></td>
+														<td>取引先1</td>
+														<td>中央区</td>
+														<td>50,000,000</td>
+														<td>2,000</td>
+														<td>2,200</td>
+														<td>2103-1001-1</td>
+														<td>140h～180h</td>
+														<td>0.25h</td>
+														<td>区分1</td>
+														<td><input class="rec-input" value="2021/06/01" /></td>
+														<td>XXXXXXXXXXX</td>
+														<td><a href="receive_order_regist_step.html">詳細</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox"></td>
+														<td>2103</td>
+														<td>1</td>
+														<td>AAA</td>
+														<td>5</td>
+														<td></td>
+														<td>取引先1</td>
+														<td>中央区</td>
+														<td>50,000,000</td>
+														<td>2,000</td>
+														<td>2,200</td>
+														<td>2103-1001-1</td>
+														<td>140h～180h</td>
+														<td>0.25h</td>
+														<td>区分1</td>
+														<td><input class="rec-input" value="2021/06/01" /></td>
+														<td>XXXXXXXXXXX</td>
+														<td><a href="receive_order_regist_step.html">詳細</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox"></td>
+														<td>2103</td>
+														<td>1</td>
+														<td>AAA</td>
+														<td>5</td>
+														<td></td>
+														<td>取引先1</td>
+														<td>中央区</td>
+														<td>50,000,000</td>
+														<td>2,000</td>
+														<td>2,200</td>
+														<td>2103-1001-1</td>
+														<td>140h～180h</td>
+														<td>0.25h</td>
+														<td>区分1</td>
+														<td><input class="rec-input" value="2021/06/01" /></td>
+														<td>XXXXXXXXXXX</td>
+														<td><a href="receive_order_regist_step.html">詳細</td>
+													</tr>
+												</tbody>
 										</table>
 									</div>
 									<div class=" text-center">
