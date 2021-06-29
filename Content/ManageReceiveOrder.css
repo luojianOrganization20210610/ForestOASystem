@@ -183,3 +183,7 @@ select {
 	font-size: 14px;
 	width: 80px;
 }
+
+table thead th {
+	border-bottom: 3px solid #bbb !important;
+}
